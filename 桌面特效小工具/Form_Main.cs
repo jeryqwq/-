@@ -257,12 +257,13 @@ namespace 桌面特效小工具
         }
         private void skinRadioButton2_CheckedChanged(object sender, EventArgs e)
         {
-           
+            web.Url = new Uri(Path.GetFullPath(@"前端/3Dcanvas.html"));
+            panel_web.Controls.Add(web);
         }
 
         private void skinRadioButton8_CheckedChanged(object sender, EventArgs e)
         {
-            web.Url = new Uri(Path.GetFullPath(@"3dflower.html"));
+            web.Url = new Uri(Path.GetFullPath(@"前端/3dflower.html"));
             panel_web.Controls.Add(web);
         }
     }
