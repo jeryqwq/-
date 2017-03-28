@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="桌面特效小工具" GeneratedClassName="MyApp">
+  <Profiles />
+  <Settings>
+    <Setting Name="Path_background" Type="System.String" Scope="User">
+      <Value Profile="(Default)">BackGround//2.png</Value>
+    </Setting>
+    <Setting Name="ClockStyle" Type="System.String" Scope="User">
+      <Value Profile="(Default)">UiDesign</Value>
+    </Setting>
+    <Setting Name="AlwaysAblove" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
