@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -74,6 +74,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form_DeskImg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_DespImg.Designer.cs" />
+    <Compile Include="Form_Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Setting.Designer.cs">
+      <DependentUpon>Form_Setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_SkinChang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_SkinChang.designer.cs">
+      <DependentUpon>Form_SkinChang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Time.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,13 +102,8 @@
     <Compile Include="Form_Main.Designer.cs">
       <DependentUpon>Form_Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_SkinChang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_SkinChang.Designer.cs">
-      <DependentUpon>Form_SkinChang.cs</DependentUpon>
-    </Compile>
     <Compile Include="IEChang.cs" />
+    <Compile Include="Light.cs" />
     <Compile Include="MyApp.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -107,15 +118,19 @@
     </Compile>
     <Compile Include="SystemVoid.cs" />
     <Compile Include="UserMessagebox.cs" />
+    <Compile Include="UserNoDoSomething.cs" />
     <Compile Include="Win32.cs" />
+    <EmbeddedResource Include="Form_Setting.resx">
+      <DependentUpon>Form_Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_SkinChang.resx">
+      <DependentUpon>Form_SkinChang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Time.resx">
       <DependentUpon>Form_Time.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Main.resx">
       <DependentUpon>Form_Main.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_SkinChang.resx">
-      <DependentUpon>Form_SkinChang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

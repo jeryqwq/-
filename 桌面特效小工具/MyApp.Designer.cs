@@ -58,5 +58,77 @@ namespace 桌面特效小工具 {
                 this["AlwaysAblove"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2")]
+        public int userNoDoThing {
+            get {
+                return ((int)(this["userNoDoThing"]));
+            }
+            set {
+                this["userNoDoThing"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("30")]
+        public int Light {
+            get {
+                return ((int)(this["Light"]));
+            }
+            set {
+                this["Light"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("123")]
+        public string userPwd {
+            get {
+                return ((string)(this["userPwd"]));
+            }
+            set {
+                this["userPwd"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int DeskLoop {
+            get {
+                return ((int)(this["DeskLoop"]));
+            }
+            set {
+                this["DeskLoop"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("蒲公英")]
+        public string DeskStyle {
+            get {
+                return ((string)(this["DeskStyle"]));
+            }
+            set {
+                this["DeskStyle"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("20")]
+        public int Time_Locked {
+            get {
+                return ((int)(this["Time_Locked"]));
+            }
+            set {
+                this["Time_Locked"] = value;
+            }
+        }
     }
 }

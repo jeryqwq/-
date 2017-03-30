@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CCWin;
 using System.IO;
-using 桌面特效小工具;
 using clock;
+using System.Runtime.InteropServices;
+using Microsoft.Win32;
+using LightControl;
+using Desk;
 
 namespace 桌面特效小工具
 {
@@ -20,17 +17,39 @@ namespace 桌面特效小工具
         {
             InitializeComponent();
         }
+        SystemVoid systemvoid = new SystemVoid();
         Form_SkinChang sc = new Form_SkinChang();
         bool FormOpenOrClose = true;
         UserMessagebox usermessagebox = new UserMessagebox();
+        Form_Setting form_setting = new Form_Setting();
         Point downPoint;
         Form_Time form_time = new Form_Time();
+        //[StructLayout(LayoutKind.Sequential)]
+        //public struct LASTINPUTINFO
+        //{
+        //    [MarshalAs(UnmanagedType.U4)]
+        //    public int cbSize;
+        //    [MarshalAs(UnmanagedType.U4)]
+        //    public uint dwTime;
+        //}
+        //[DllImport("user32.dll")]
+        //public static extern bool GetLastInputInfo(ref LASTINPUTINFO plii);
+
+
+        //public long getIdleTick()
+        //{
+        //    LASTINPUTINFO vLastInputInfo = new LASTINPUTINFO();
+        //    vLastInputInfo.cbSize = Marshal.SizeOf(vLastInputInfo);
+        //    if (!GetLastInputInfo(ref vLastInputInfo)) return 0;
+        //    return (Environment.TickCount - (long)vLastInputInfo.dwTime)/1000;
+        //}
+      
         private void Form1_Load(object sender, EventArgs e)
         {
             //this.WindowState = FormWindowState.Maximized;
             this.BackgroundImage = Image.FromFile(MyApp.Default.Path_background);
             tab_tool.SelectedIndex = 0;
-           
+            Light.SetGamma(MyApp.Default.Light);
             // IEVersion.BrowserEmulationSet();//此行代码运行一次即可，只是为了获得管理员权限，更改IE内核版本，执行后可继续注释掉，不然每次打开都要二次运行
             
         }
@@ -87,16 +106,13 @@ namespace 桌面特效小工具
                 panel_webFile.Controls.Add(web);
                 string dir = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
                 web.Url = new Uri(dir);
-                btn_ChangClocl.Visible = false;
-            }
-            else {
-                btn_ChangClocl.Visible = true;
+              
             }
         }
 
         private void btn_setting_Click(object sender, EventArgs e)
         {
-            tab_tool.SelectedIndex = 5;
+            form_setting.Show();
         }
 
         private void skinButton1_Click(object sender, EventArgs e)
@@ -183,21 +199,6 @@ namespace 桌面特效小工具
             }
 
             this.TopMost = true;
-            //CCSkinMain MessageboxForm = new CCSkinMain();
-            //MessageboxForm.MinimizeBox = false;
-            //MessageboxForm.MaximizeBox = false;
-            //MessageboxForm.ControlBox = true;
-            //MessageboxForm.FormBorderStyle = FormBorderStyle.None;
-            //MessageboxForm.WindowState = FormWindowState.Maximized;
-            ////  MessageboxForm.BackColor = this.BackColor;
-            //MessageboxForm.BackgroundImage = Image.FromFile(MyApp.Default.Path_background);
-            //MessageboxForm.BackgroundImageLayout = ImageLayout.Stretch;
-            //MessageboxForm.ControlBox = false;
-            //MessageboxForm.StartPosition = FormStartPosition.WindowsDefaultLocation;
-            //MessageboxForm.ShowDrawIcon = false;
-            //MessageboxForm.Controls.Add(web);
-            //MessageboxForm.TopMost = true;
-            //MessageboxForm.Show();
         }
 
         private void skinButton4_Click(object sender, EventArgs e)
@@ -265,6 +266,91 @@ namespace 桌面特效小工具
         {
             web.Url = new Uri(Path.GetFullPath(@"前端/3dflower.html"));
             panel_web.Controls.Add(web);
+        }
+
+
+        private void timer_userNoDo_Tick(object sender, EventArgs e)
+        {
+          
+            if (UserNoDoSomething.UserNoDoSomething.GetLastInputTime()==MyApp.Default.userNoDoThing)//系统的API参数返回的用户无操作时间与用户配置的时间相同  单位/秒
+            {
+                btn_begin.PerformClick();
+            }
+        }
+        private void GotoWeb(string weburl)
+        {
+            RegistryKey key = Registry.ClassesRoot.OpenSubKey(@"http\shell\open\command\");
+            string s = key.GetValue("").ToString();
+            System.Diagnostics.Process.Start(s.Substring(0, s.Length - 8),weburl );
+        }
+        private void 软件源码ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GotoWeb("https://github.com/jeryqwq/-");
+        }
+
+     
+     
+
+        private void btn_mainpage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void skinCheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+        public void ShowForm_Img()
+        {
+            Form_DeskImg frm = new Form_DeskImg();
+            frm.Show();
+        }
+
+        public void threadPro()
+        {
+            MethodInvoker MethInvo = new MethodInvoker(ShowForm_Img);
+            BeginInvoke(MethInvo);
+        }
+        private void skinRadioButton7_CheckedChanged(object sender, EventArgs e)
+        {
+            systemvoid.CloseForm("Form_DeskImg");
+            MyApp.Default.DeskStyle = "蒲公英";
+            MyApp.Default.Save();
+            threadPro();
+        }
+
+        private void skinRadioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            systemvoid.CloseForm("Form_DeskImg");
+            MyApp.Default.DeskStyle = "snow";
+            MyApp.Default.Save();
+            threadPro();
+        }
+
+        private void skinRadioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            systemvoid.CloseForm("Form_DeskImg");
+            MyApp.Default.DeskStyle = "paopao";
+            MyApp.Default.Save();
+            threadPro();
+        }
+
+        private void skinRadioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            systemvoid.CloseForm("Form_DeskImg");
+            MyApp.Default.DeskStyle = "love";
+            MyApp.Default.Save();
+            threadPro();
+        }
+
+        private void cb_CloseTeskImg_CheckedChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void cb_prected_CheckedChanged(object sender, EventArgs e)
+        {if (timer_userNoDo.Enabled == false) { timer_userNoDo.Enabled = true; return; }
+            if (timer_userNoDo.Enabled == true) { timer_userNoDo.Enabled = false; return; }
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Desk;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace 桌面特效小工具
 /// </summary>
     class SystemVoid
     {
+
         /// <summary>
         /// 根据窗体的Nmae属性得到窗体，实现不同窗体间的操作。
         /// </summary>
@@ -91,6 +93,7 @@ namespace 桌面特效小工具
             }
 
         }
+     
 
     }
 }

@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CCWin;
-using clock;
 namespace 桌面特效小工具
 {
     public partial class Form_SkinChang : CCSkinMain
@@ -86,8 +78,10 @@ namespace 桌面特效小工具
                 systemvoid.SetFormBackImage("Form_Main",file);
                 Application.UserAppDataRegistry.SetValue("file", file);
             }
+            if (file != "") {
             MyApp.Default.Path_background = file;
             MyApp.Default.Save();
+            }
         }
     }
 }
