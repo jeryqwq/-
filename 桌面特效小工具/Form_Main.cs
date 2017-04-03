@@ -376,15 +376,10 @@ namespace 桌面特效小工具
                 btn_begin.PerformClick();
             }
         }
-        private void GotoWeb(string weburl)
-        {
-            RegistryKey key = Registry.ClassesRoot.OpenSubKey(@"http\shell\open\command\");
-            string s = key.GetValue("").ToString();
-            System.Diagnostics.Process.Start(s.Substring(0, s.Length - 8),weburl );
-        }
+      
         private void 软件源码ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GotoWeb("https://github.com/jeryqwq/-");
+           systemvoid.GotoWeb("http://doyuourself.top/Windows-Tools/");
         }
 
      

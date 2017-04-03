@@ -50,12 +50,6 @@
             this.panel_tabcontrol = new CCWin.SkinControl.SkinPanel();
             this.tab_tool = new CCWin.SkinControl.SkinTabControl();
             this.page_main = new CCWin.SkinControl.SkinTabPage();
-            this.tab_file = new CCWin.SkinControl.SkinTabPage();
-            this.skinButton6 = new CCWin.SkinControl.SkinButton();
-            this.skinButton5 = new CCWin.SkinControl.SkinButton();
-            this.skinButton4 = new CCWin.SkinControl.SkinButton();
-            this.skinButton1 = new CCWin.SkinControl.SkinButton();
-            this.panel_webFile = new System.Windows.Forms.Panel();
             this.page_background = new CCWin.SkinControl.SkinTabPage();
             this.skinButton3 = new CCWin.SkinControl.SkinButton();
             this.tvList = new CCWin.SkinControl.SkinTreeView();
@@ -78,13 +72,19 @@
             this.skinRadioButton2 = new CCWin.SkinControl.SkinRadioButton();
             this.panel_web = new System.Windows.Forms.Panel();
             this.web = new System.Windows.Forms.WebBrowser();
-            this.page_games = new CCWin.SkinControl.SkinTabPage();
+            this.tab_file = new CCWin.SkinControl.SkinTabPage();
+            this.skinButton6 = new CCWin.SkinControl.SkinButton();
+            this.skinButton5 = new CCWin.SkinControl.SkinButton();
+            this.skinButton4 = new CCWin.SkinControl.SkinButton();
+            this.skinButton1 = new CCWin.SkinControl.SkinButton();
+            this.panel_webFile = new System.Windows.Forms.Panel();
             this.page_js = new CCWin.SkinControl.SkinTabPage();
             this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
             this.skinRadioButton7 = new CCWin.SkinControl.SkinRadioButton();
             this.skinRadioButton4 = new CCWin.SkinControl.SkinRadioButton();
             this.skinRadioButton3 = new CCWin.SkinControl.SkinRadioButton();
             this.skinRadioButton1 = new CCWin.SkinControl.SkinRadioButton();
+            this.page_games = new CCWin.SkinControl.SkinTabPage();
             this.ToolTip = new CCWin.SkinToolTip(this.components);
             this.btn_ChangClocl = new CCWin.SkinControl.SkinButton();
             this.timer_hide = new System.Windows.Forms.Timer(this.components);
@@ -94,11 +94,11 @@
             this.menu_setting.SuspendLayout();
             this.panel_tabcontrol.SuspendLayout();
             this.tab_tool.SuspendLayout();
-            this.tab_file.SuspendLayout();
             this.page_background.SuspendLayout();
             this.menu_OnlineImg.SuspendLayout();
             this.page_proctect.SuspendLayout();
             this.panel_web.SuspendLayout();
+            this.tab_file.SuspendLayout();
             this.page_js.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -373,7 +373,7 @@
             // 
             this.主页ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("主页ToolStripMenuItem.Image")));
             this.主页ToolStripMenuItem.Name = "主页ToolStripMenuItem";
-            this.主页ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.主页ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.主页ToolStripMenuItem.Text = "主页";
             this.主页ToolStripMenuItem.Click += new System.EventHandler(this.主页ToolStripMenuItem_Click);
             // 
@@ -381,7 +381,7 @@
             // 
             this.桌面时钟ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("桌面时钟ToolStripMenuItem.Image")));
             this.桌面时钟ToolStripMenuItem.Name = "桌面时钟ToolStripMenuItem";
-            this.桌面时钟ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.桌面时钟ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.桌面时钟ToolStripMenuItem.Text = "桌面时钟";
             this.桌面时钟ToolStripMenuItem.Click += new System.EventHandler(this.桌面时钟ToolStripMenuItem_Click);
             // 
@@ -390,7 +390,7 @@
             this.设置中心ToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.设置中心ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("设置中心ToolStripMenuItem.Image")));
             this.设置中心ToolStripMenuItem.Name = "设置中心ToolStripMenuItem";
-            this.设置中心ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.设置中心ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.设置中心ToolStripMenuItem.Text = "设置中心";
             this.设置中心ToolStripMenuItem.Click += new System.EventHandler(this.设置中心ToolStripMenuItem_Click);
             // 
@@ -398,7 +398,7 @@
             // 
             this.小组ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("小组ToolStripMenuItem.Image")));
             this.小组ToolStripMenuItem.Name = "小组ToolStripMenuItem";
-            this.小组ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.小组ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.小组ToolStripMenuItem.Text = "小组人员";
             this.小组ToolStripMenuItem.Click += new System.EventHandler(this.小组ToolStripMenuItem_Click);
             // 
@@ -406,22 +406,22 @@
             // 
             this.软件源码ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("软件源码ToolStripMenuItem.Image")));
             this.软件源码ToolStripMenuItem.Name = "软件源码ToolStripMenuItem";
-            this.软件源码ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.软件源码ToolStripMenuItem.Text = "软件源码";
+            this.软件源码ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.软件源码ToolStripMenuItem.Text = "软件主页";
             this.软件源码ToolStripMenuItem.Click += new System.EventHandler(this.软件源码ToolStripMenuItem_Click);
             // 
             // 反馈建议ToolStripMenuItem
             // 
             this.反馈建议ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("反馈建议ToolStripMenuItem.Image")));
             this.反馈建议ToolStripMenuItem.Name = "反馈建议ToolStripMenuItem";
-            this.反馈建议ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.反馈建议ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.反馈建议ToolStripMenuItem.Text = "反馈建议";
             // 
             // 关于ToolStripMenuItem
             // 
             this.关于ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("关于ToolStripMenuItem.Image")));
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.关于ToolStripMenuItem.Text = "关于";
             // 
             // panel_tabcontrol
@@ -498,136 +498,6 @@
             this.page_main.TabIndex = 5;
             this.page_main.TabItemImage = ((System.Drawing.Image)(resources.GetObject("page_main.TabItemImage")));
             this.page_main.Text = "主页";
-            // 
-            // tab_file
-            // 
-            this.tab_file.BackColor = System.Drawing.Color.Transparent;
-            this.tab_file.Controls.Add(this.skinButton6);
-            this.tab_file.Controls.Add(this.skinButton5);
-            this.tab_file.Controls.Add(this.skinButton4);
-            this.tab_file.Controls.Add(this.skinButton1);
-            this.tab_file.Controls.Add(this.panel_webFile);
-            this.tab_file.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tab_file.Location = new System.Drawing.Point(0, 0);
-            this.tab_file.Name = "tab_file";
-            this.tab_file.Size = new System.Drawing.Size(719, 439);
-            this.tab_file.TabIndex = 6;
-            this.tab_file.TabItemImage = ((System.Drawing.Image)(resources.GetObject("tab_file.TabItemImage")));
-            this.tab_file.Text = "桌面文件整理";
-            // 
-            // skinButton6
-            // 
-            this.skinButton6.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("skinButton6.BackgroundImage")));
-            this.skinButton6.BaseColor = System.Drawing.Color.Transparent;
-            this.skinButton6.BorderColor = System.Drawing.Color.Transparent;
-            this.skinButton6.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton6.DownBack = ((System.Drawing.Image)(resources.GetObject("skinButton6.DownBack")));
-            this.skinButton6.DownBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton6.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.skinButton6.FadeGlow = false;
-            this.skinButton6.Font = new System.Drawing.Font("微软雅黑 Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinButton6.ForeColor = System.Drawing.Color.Transparent;
-            this.skinButton6.GlowColor = System.Drawing.Color.Transparent;
-            this.skinButton6.InnerBorderColor = System.Drawing.Color.Transparent;
-            this.skinButton6.Location = new System.Drawing.Point(372, 18);
-            this.skinButton6.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton6.MouseBack")));
-            this.skinButton6.MouseBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton6.Name = "skinButton6";
-            this.skinButton6.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton6.NormlBack")));
-            this.skinButton6.Size = new System.Drawing.Size(108, 35);
-            this.skinButton6.TabIndex = 37;
-            this.skinButton6.Text = "一键还原";
-            this.skinButton6.UseVisualStyleBackColor = true;
-            this.skinButton6.Click += new System.EventHandler(this.skinButton6_Click);
-            // 
-            // skinButton5
-            // 
-            this.skinButton5.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("skinButton5.BackgroundImage")));
-            this.skinButton5.BaseColor = System.Drawing.Color.Transparent;
-            this.skinButton5.BorderColor = System.Drawing.Color.Transparent;
-            this.skinButton5.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton5.DownBack = ((System.Drawing.Image)(resources.GetObject("skinButton5.DownBack")));
-            this.skinButton5.DownBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton5.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.skinButton5.FadeGlow = false;
-            this.skinButton5.Font = new System.Drawing.Font("微软雅黑 Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinButton5.ForeColor = System.Drawing.Color.Transparent;
-            this.skinButton5.GlowColor = System.Drawing.Color.Transparent;
-            this.skinButton5.InnerBorderColor = System.Drawing.Color.Transparent;
-            this.skinButton5.Location = new System.Drawing.Point(518, 18);
-            this.skinButton5.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton5.MouseBack")));
-            this.skinButton5.MouseBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton5.Name = "skinButton5";
-            this.skinButton5.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton5.NormlBack")));
-            this.skinButton5.Size = new System.Drawing.Size(85, 35);
-            this.skinButton5.TabIndex = 36;
-            this.skinButton5.Text = "上一页";
-            this.skinButton5.UseVisualStyleBackColor = true;
-            this.skinButton5.Click += new System.EventHandler(this.skinButton5_Click);
-            // 
-            // skinButton4
-            // 
-            this.skinButton4.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("skinButton4.BackgroundImage")));
-            this.skinButton4.BaseColor = System.Drawing.Color.Transparent;
-            this.skinButton4.BorderColor = System.Drawing.Color.Transparent;
-            this.skinButton4.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton4.DownBack = ((System.Drawing.Image)(resources.GetObject("skinButton4.DownBack")));
-            this.skinButton4.DownBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton4.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.skinButton4.FadeGlow = false;
-            this.skinButton4.Font = new System.Drawing.Font("微软雅黑 Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinButton4.ForeColor = System.Drawing.Color.Transparent;
-            this.skinButton4.GlowColor = System.Drawing.Color.Transparent;
-            this.skinButton4.InnerBorderColor = System.Drawing.Color.Transparent;
-            this.skinButton4.Location = new System.Drawing.Point(187, 18);
-            this.skinButton4.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton4.MouseBack")));
-            this.skinButton4.MouseBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton4.Name = "skinButton4";
-            this.skinButton4.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton4.NormlBack")));
-            this.skinButton4.Size = new System.Drawing.Size(141, 35);
-            this.skinButton4.TabIndex = 35;
-            this.skinButton4.Text = "一键桌面整理";
-            this.skinButton4.UseVisualStyleBackColor = true;
-            this.skinButton4.Click += new System.EventHandler(this.skinButton4_Click_1);
-            // 
-            // skinButton1
-            // 
-            this.skinButton1.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("skinButton1.BackgroundImage")));
-            this.skinButton1.BaseColor = System.Drawing.Color.Transparent;
-            this.skinButton1.BorderColor = System.Drawing.Color.Transparent;
-            this.skinButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton1.DownBack = ((System.Drawing.Image)(resources.GetObject("skinButton1.DownBack")));
-            this.skinButton1.DownBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton1.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.skinButton1.FadeGlow = false;
-            this.skinButton1.Font = new System.Drawing.Font("微软雅黑 Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinButton1.ForeColor = System.Drawing.Color.Transparent;
-            this.skinButton1.GlowColor = System.Drawing.Color.Transparent;
-            this.skinButton1.InnerBorderColor = System.Drawing.Color.Transparent;
-            this.skinButton1.Location = new System.Drawing.Point(30, 18);
-            this.skinButton1.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton1.MouseBack")));
-            this.skinButton1.MouseBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton1.Name = "skinButton1";
-            this.skinButton1.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton1.NormlBack")));
-            this.skinButton1.Size = new System.Drawing.Size(113, 35);
-            this.skinButton1.TabIndex = 34;
-            this.skinButton1.Text = "加载桌面";
-            this.skinButton1.UseVisualStyleBackColor = true;
-            this.skinButton1.Click += new System.EventHandler(this.skinButton1_Click_1);
-            // 
-            // panel_webFile
-            // 
-            this.panel_webFile.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel_webFile.Location = new System.Drawing.Point(0, 72);
-            this.panel_webFile.Name = "panel_webFile";
-            this.panel_webFile.Size = new System.Drawing.Size(715, 364);
-            this.panel_webFile.TabIndex = 0;
             // 
             // page_background
             // 
@@ -741,7 +611,7 @@
             // 
             this.toolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem1.Image")));
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(148, 22);
             this.toolStripMenuItem1.Text = "设为当前壁纸";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
@@ -1050,17 +920,135 @@
             this.web.WebBrowserShortcutsEnabled = false;
             this.web.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.web_PreviewKeyDown);
             // 
-            // page_games
+            // tab_file
             // 
-            this.page_games.BackColor = System.Drawing.Color.Transparent;
-            this.page_games.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.page_games.Location = new System.Drawing.Point(0, 0);
-            this.page_games.Name = "page_games";
-            this.page_games.Size = new System.Drawing.Size(719, 439);
-            this.page_games.TabIndex = 3;
-            this.page_games.TabItemImage = ((System.Drawing.Image)(resources.GetObject("page_games.TabItemImage")));
-            this.page_games.Text = "桌面小游戏";
-            this.page_games.ToolTipText = "桌面小游戏";
+            this.tab_file.BackColor = System.Drawing.Color.Transparent;
+            this.tab_file.Controls.Add(this.skinButton6);
+            this.tab_file.Controls.Add(this.skinButton5);
+            this.tab_file.Controls.Add(this.skinButton4);
+            this.tab_file.Controls.Add(this.skinButton1);
+            this.tab_file.Controls.Add(this.panel_webFile);
+            this.tab_file.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_file.Location = new System.Drawing.Point(0, 0);
+            this.tab_file.Name = "tab_file";
+            this.tab_file.Size = new System.Drawing.Size(719, 439);
+            this.tab_file.TabIndex = 6;
+            this.tab_file.TabItemImage = ((System.Drawing.Image)(resources.GetObject("tab_file.TabItemImage")));
+            this.tab_file.Text = "桌面文件整理";
+            // 
+            // skinButton6
+            // 
+            this.skinButton6.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("skinButton6.BackgroundImage")));
+            this.skinButton6.BaseColor = System.Drawing.Color.Transparent;
+            this.skinButton6.BorderColor = System.Drawing.Color.Transparent;
+            this.skinButton6.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton6.DownBack = ((System.Drawing.Image)(resources.GetObject("skinButton6.DownBack")));
+            this.skinButton6.DownBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton6.DrawType = CCWin.SkinControl.DrawStyle.Img;
+            this.skinButton6.FadeGlow = false;
+            this.skinButton6.Font = new System.Drawing.Font("微软雅黑 Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinButton6.ForeColor = System.Drawing.Color.Transparent;
+            this.skinButton6.GlowColor = System.Drawing.Color.Transparent;
+            this.skinButton6.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.skinButton6.Location = new System.Drawing.Point(372, 18);
+            this.skinButton6.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton6.MouseBack")));
+            this.skinButton6.MouseBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton6.Name = "skinButton6";
+            this.skinButton6.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton6.NormlBack")));
+            this.skinButton6.Size = new System.Drawing.Size(108, 35);
+            this.skinButton6.TabIndex = 37;
+            this.skinButton6.Text = "一键还原";
+            this.skinButton6.UseVisualStyleBackColor = true;
+            this.skinButton6.Click += new System.EventHandler(this.skinButton6_Click);
+            // 
+            // skinButton5
+            // 
+            this.skinButton5.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("skinButton5.BackgroundImage")));
+            this.skinButton5.BaseColor = System.Drawing.Color.Transparent;
+            this.skinButton5.BorderColor = System.Drawing.Color.Transparent;
+            this.skinButton5.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton5.DownBack = ((System.Drawing.Image)(resources.GetObject("skinButton5.DownBack")));
+            this.skinButton5.DownBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton5.DrawType = CCWin.SkinControl.DrawStyle.Img;
+            this.skinButton5.FadeGlow = false;
+            this.skinButton5.Font = new System.Drawing.Font("微软雅黑 Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinButton5.ForeColor = System.Drawing.Color.Transparent;
+            this.skinButton5.GlowColor = System.Drawing.Color.Transparent;
+            this.skinButton5.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.skinButton5.Location = new System.Drawing.Point(518, 18);
+            this.skinButton5.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton5.MouseBack")));
+            this.skinButton5.MouseBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton5.Name = "skinButton5";
+            this.skinButton5.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton5.NormlBack")));
+            this.skinButton5.Size = new System.Drawing.Size(85, 35);
+            this.skinButton5.TabIndex = 36;
+            this.skinButton5.Text = "上一页";
+            this.skinButton5.UseVisualStyleBackColor = true;
+            this.skinButton5.Click += new System.EventHandler(this.skinButton5_Click);
+            // 
+            // skinButton4
+            // 
+            this.skinButton4.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("skinButton4.BackgroundImage")));
+            this.skinButton4.BaseColor = System.Drawing.Color.Transparent;
+            this.skinButton4.BorderColor = System.Drawing.Color.Transparent;
+            this.skinButton4.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton4.DownBack = ((System.Drawing.Image)(resources.GetObject("skinButton4.DownBack")));
+            this.skinButton4.DownBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton4.DrawType = CCWin.SkinControl.DrawStyle.Img;
+            this.skinButton4.FadeGlow = false;
+            this.skinButton4.Font = new System.Drawing.Font("微软雅黑 Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinButton4.ForeColor = System.Drawing.Color.Transparent;
+            this.skinButton4.GlowColor = System.Drawing.Color.Transparent;
+            this.skinButton4.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.skinButton4.Location = new System.Drawing.Point(187, 18);
+            this.skinButton4.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton4.MouseBack")));
+            this.skinButton4.MouseBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton4.Name = "skinButton4";
+            this.skinButton4.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton4.NormlBack")));
+            this.skinButton4.Size = new System.Drawing.Size(141, 35);
+            this.skinButton4.TabIndex = 35;
+            this.skinButton4.Text = "一键桌面整理";
+            this.skinButton4.UseVisualStyleBackColor = true;
+            this.skinButton4.Click += new System.EventHandler(this.skinButton4_Click_1);
+            // 
+            // skinButton1
+            // 
+            this.skinButton1.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("skinButton1.BackgroundImage")));
+            this.skinButton1.BaseColor = System.Drawing.Color.Transparent;
+            this.skinButton1.BorderColor = System.Drawing.Color.Transparent;
+            this.skinButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton1.DownBack = ((System.Drawing.Image)(resources.GetObject("skinButton1.DownBack")));
+            this.skinButton1.DownBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton1.DrawType = CCWin.SkinControl.DrawStyle.Img;
+            this.skinButton1.FadeGlow = false;
+            this.skinButton1.Font = new System.Drawing.Font("微软雅黑 Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinButton1.ForeColor = System.Drawing.Color.Transparent;
+            this.skinButton1.GlowColor = System.Drawing.Color.Transparent;
+            this.skinButton1.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.skinButton1.Location = new System.Drawing.Point(30, 18);
+            this.skinButton1.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton1.MouseBack")));
+            this.skinButton1.MouseBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton1.Name = "skinButton1";
+            this.skinButton1.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton1.NormlBack")));
+            this.skinButton1.Size = new System.Drawing.Size(113, 35);
+            this.skinButton1.TabIndex = 34;
+            this.skinButton1.Text = "加载桌面";
+            this.skinButton1.UseVisualStyleBackColor = true;
+            this.skinButton1.Click += new System.EventHandler(this.skinButton1_Click_1);
+            // 
+            // panel_webFile
+            // 
+            this.panel_webFile.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel_webFile.Location = new System.Drawing.Point(0, 72);
+            this.panel_webFile.Name = "panel_webFile";
+            this.panel_webFile.Size = new System.Drawing.Size(715, 364);
+            this.panel_webFile.TabIndex = 0;
             // 
             // page_js
             // 
@@ -1191,6 +1179,18 @@
             this.skinRadioButton1.UseVisualStyleBackColor = false;
             this.skinRadioButton1.CheckedChanged += new System.EventHandler(this.skinRadioButton1_CheckedChanged);
             // 
+            // page_games
+            // 
+            this.page_games.BackColor = System.Drawing.Color.Transparent;
+            this.page_games.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.page_games.Location = new System.Drawing.Point(0, 0);
+            this.page_games.Name = "page_games";
+            this.page_games.Size = new System.Drawing.Size(719, 439);
+            this.page_games.TabIndex = 3;
+            this.page_games.TabItemImage = ((System.Drawing.Image)(resources.GetObject("page_games.TabItemImage")));
+            this.page_games.Text = "桌面小游戏";
+            this.page_games.ToolTipText = "桌面小游戏";
+            // 
             // ToolTip
             // 
             this.ToolTip.AutoPopDelay = 5000;
@@ -1281,12 +1281,12 @@
             this.menu_setting.ResumeLayout(false);
             this.panel_tabcontrol.ResumeLayout(false);
             this.tab_tool.ResumeLayout(false);
-            this.tab_file.ResumeLayout(false);
             this.page_background.ResumeLayout(false);
             this.menu_OnlineImg.ResumeLayout(false);
             this.page_proctect.ResumeLayout(false);
             this.page_proctect.PerformLayout();
             this.panel_web.ResumeLayout(false);
+            this.tab_file.ResumeLayout(false);
             this.page_js.ResumeLayout(false);
             this.page_js.PerformLayout();
             this.ResumeLayout(false);

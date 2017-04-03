@@ -1,4 +1,5 @@
 ﻿using Desk;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -80,6 +81,12 @@ namespace 桌面特效小工具
                 }
             }
 
+        }
+       public void GotoWeb(string weburl)
+        {
+            RegistryKey key = Registry.ClassesRoot.OpenSubKey(@"http\shell\open\command\");
+            string s = key.GetValue("").ToString();
+            System.Diagnostics.Process.Start(s.Substring(0, s.Length - 8), weburl);
         }
         public void ReturnFormSize(string FormName)
         {
