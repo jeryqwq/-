@@ -449,11 +449,11 @@
             this.tab_tool.ArrowColor = System.Drawing.Color.Transparent;
             this.tab_tool.CloseRect = new System.Drawing.Rectangle(2, 2, 12, 12);
             this.tab_tool.Controls.Add(this.page_main);
-            this.tab_tool.Controls.Add(this.tab_file);
             this.tab_tool.Controls.Add(this.page_background);
             this.tab_tool.Controls.Add(this.page_proctect);
-            this.tab_tool.Controls.Add(this.page_games);
+            this.tab_tool.Controls.Add(this.tab_file);
             this.tab_tool.Controls.Add(this.page_js);
+            this.tab_tool.Controls.Add(this.page_games);
             this.tab_tool.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tab_tool.HeadBack = null;
             this.tab_tool.HotTrack = true;
@@ -480,7 +480,7 @@
             this.tab_tool.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Top;
             this.tab_tool.PageNorml = null;
             this.tab_tool.PageNormlTxtColor = System.Drawing.Color.White;
-            this.tab_tool.SelectedIndex = 3;
+            this.tab_tool.SelectedIndex = 0;
             this.tab_tool.Size = new System.Drawing.Size(719, 490);
             this.tab_tool.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tab_tool.TabIndex = 6;
@@ -617,6 +617,7 @@
             this.skinButton1.TabIndex = 34;
             this.skinButton1.Text = "加载桌面";
             this.skinButton1.UseVisualStyleBackColor = true;
+            this.skinButton1.Click += new System.EventHandler(this.skinButton1_Click_1);
             // 
             // panel_webFile
             // 
@@ -740,25 +741,28 @@
             // 
             this.toolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem1.Image")));
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(148, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.toolStripMenuItem1.Text = "设为当前壁纸";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // 查看图片文件夹ToolStripMenuItem
             // 
+            this.查看图片文件夹ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("查看图片文件夹ToolStripMenuItem.Image")));
             this.查看图片文件夹ToolStripMenuItem.Name = "查看图片文件夹ToolStripMenuItem";
             this.查看图片文件夹ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.查看图片文件夹ToolStripMenuItem.Text = "图片文件夹";
+            this.查看图片文件夹ToolStripMenuItem.Text = "壁纸文件夹";
             this.查看图片文件夹ToolStripMenuItem.Click += new System.EventHandler(this.查看图片文件夹ToolStripMenuItem_Click);
             // 
             // 图片缓存ToolStripMenuItem
             // 
+            this.图片缓存ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("图片缓存ToolStripMenuItem.Image")));
             this.图片缓存ToolStripMenuItem.Name = "图片缓存ToolStripMenuItem";
             this.图片缓存ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.图片缓存ToolStripMenuItem.Text = "图片缓存";
             // 
             // 图片另存为ToolStripMenuItem
             // 
+            this.图片另存为ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("图片另存为ToolStripMenuItem.Image")));
             this.图片另存为ToolStripMenuItem.Name = "图片另存为ToolStripMenuItem";
             this.图片另存为ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.图片另存为ToolStripMenuItem.Text = "图片另存为";
@@ -1214,7 +1218,7 @@
             this.btn_ChangClocl.ForeColor = System.Drawing.Color.White;
             this.btn_ChangClocl.GlowColor = System.Drawing.Color.Transparent;
             this.btn_ChangClocl.InnerBorderColor = System.Drawing.Color.Transparent;
-            this.btn_ChangClocl.Location = new System.Drawing.Point(623, 62);
+            this.btn_ChangClocl.Location = new System.Drawing.Point(623, 57);
             this.btn_ChangClocl.MouseBack = ((System.Drawing.Image)(resources.GetObject("btn_ChangClocl.MouseBack")));
             this.btn_ChangClocl.MouseBaseColor = System.Drawing.Color.Transparent;
             this.btn_ChangClocl.Name = "btn_ChangClocl";

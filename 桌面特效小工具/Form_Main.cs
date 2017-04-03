@@ -84,8 +84,10 @@ namespace 桌面特效小工具
     
         private void btn_Close_Click(object sender, EventArgs e)
         {
+            tab_tool.SelectedIndex = 0;
             if (usermessagebox.Form_min("提示信息", "是否最小化到任务栏图标？", "", "") ==true)
             {
+              
                 timer_hide.Enabled = true;
                 notifyIcon1.Visible = true;
                //最小化任务栏
@@ -117,13 +119,7 @@ namespace 桌面特效小工具
             {
                 panel_web.Controls.Add(web);
             }
-            if (tab_tool.SelectedTab.Name == "tab_file")
-            {
-                panel_webFile.Controls.Add(web);
-                string dir = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                web.Url = new Uri(dir);
-              
-            }
+
 
             if(tab_tool.SelectedTab.Name== "page_background")
             {
@@ -322,10 +318,10 @@ namespace 桌面特效小工具
             {
                 Directory.CreateDirectory(path_music);
             }
-            if (!Directory.Exists(path_debug))
-            {
-                Directory.CreateDirectory(path_debug);
-            }
+            //if (!Directory.Exists(path_debug))
+            //{
+            //    Directory.CreateDirectory(path_debug);
+            //}
             if (!Directory.Exists(path_other))
             {
                 Directory.CreateDirectory(path_other);
@@ -375,7 +371,7 @@ namespace 桌面特效小工具
         private void timer_userNoDo_Tick(object sender, EventArgs e)
         {
           
-            if (UserNoDoSomething.UserNoDoSomething.GetLastInputTime()==MyApp.Default.userNoDoThing)//系统的API参数返回的用户无操作时间与用户配置的时间相同  单位/秒
+            if (UserNoDoSomething.UserNoDoSomething.GetLastInputTime()==MyApp.Default.userNoDoThing)
             {
                 btn_begin.PerformClick();
             }
@@ -650,7 +646,7 @@ namespace 桌面特效小工具
         private void skinButton6_Click(object sender, EventArgs e)
         {
             fileready.RemoveFile(path_music, path_desktop);
-            fileready.RemoveFile(path_debug, path_desktop);
+          //  fileready.RemoveFile(path_debug, path_desktop);
             fileready.RemoveFile(path_other, path_desktop);
         }
 
@@ -670,6 +666,12 @@ namespace 桌面特效小工具
         {
             web.Url = new Uri(Path.GetFullPath(@"前端/Rain.html"));
             panel_web.Controls.Add(web);
+        }
+
+        private void skinButton1_Click_1(object sender, EventArgs e)
+        {
+            panel_webFile.Controls.Add(web);
+            web.Url = new Uri(Environment.GetFolderPath(Environment.SpecialFolder.Desktop));
         }
     }
 }
