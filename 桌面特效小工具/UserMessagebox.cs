@@ -123,7 +123,7 @@ namespace 桌面特效小工具
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Print("提示信息", ex.ToString());
                 return false;
 
             }
@@ -133,6 +133,8 @@ namespace 桌面特效小工具
             }
 
         }
+
+     
 
 
         /// <summary>
@@ -182,7 +184,7 @@ namespace 桌面特效小工具
             SkinLabel lbtitle = new SkinLabel();
             lbtitle.Text = title;
             lbtitle.Left = 20;
-            lbtitle.Top = 25;
+            lbtitle.Top = 20;
             lbtitle.Parent = MessageboxForm;
             lbtitle.Size = new Size(120, 21);
             lbtitle.AutoSize = true;
@@ -191,7 +193,7 @@ namespace 桌面特效小工具
             // tbtext.BackColor = ColorTranslator.FromHtml(backcolor);
             tbtext.BorderStyle = BorderStyle.None;
             tbtext.Left = 30;
-            tbtext.Top = 30;
+            tbtext.Top = 40;
             tbtext.Width = 300;
             tbtext.Height = 70;
             tbtext.Parent = MessageboxForm;
@@ -209,15 +211,15 @@ namespace 桌面特效小工具
             btnok.BackColor = Color.Transparent;
             btnok.FlatAppearance.BorderSize = 1;
 
-            //Button btncancel = new Button();
-            //btncancel.Left = 200;
-            //btncancel.Top = 120;
-            //btncancel.Parent = MessageboxForm;
-            //btncancel.Text = "取消";
-            //btncancel.FlatStyle = FlatStyle.Flat;
-            //btncancel.BackColor = Color.Transparent;
-            //btncancel.DialogResult = DialogResult.Cancel;
-            //btncancel.FlatAppearance.BorderSize = 1;
+            Button btncancel = new Button();
+            btncancel.Left = 200;
+            btncancel.Top = 120;
+            btncancel.Parent = MessageboxForm;
+            btncancel.Text = "取消";
+            btncancel.FlatStyle = FlatStyle.Flat;
+            btncancel.BackColor = Color.Transparent;
+            btncancel.DialogResult = DialogResult.Cancel;
+            btncancel.FlatAppearance.BorderSize = 1;
 
             try
             {
@@ -228,16 +230,9 @@ namespace 桌面特效小工具
                 }
                 else
                 {
-                    if (type == "yes")
-                    {
-
-                        return null;
-
-                    }
-
+                    return null;
                 }
-
-                return null;
+               
 
             }
             catch (Exception ex)
@@ -262,8 +257,8 @@ namespace 桌面特效小工具
             MessageboxForm.MaximizeBox = false;
             MessageboxForm.ControlBox = true;
             MessageboxForm.Location = new Point(100, 200);
-            MessageboxForm.Width = 350;
-            MessageboxForm.Height = 200;
+            MessageboxForm.Width = 300;
+            MessageboxForm.Height = 150;
             //  MessageboxForm.BackColor = pan_SysBtn.BackColor;
             MessageboxForm.BackgroundImage = Image.FromFile(MyApp.Default.Path_background);
             MessageboxForm.BackgroundImageLayout = ImageLayout.Stretch;
@@ -278,12 +273,12 @@ namespace 桌面特效小工具
             rt.Top = 30;
             rt.ForeColor = Color.White;
             rt.Parent = MessageboxForm;
-            rt.Size = new Size(270, 100);
+            rt.Size = new Size(270, 80);
              rt.BackColor = Color.Transparent;
             rt.BorderStyle = BorderStyle.None;
             Button btnok = new Button();
             btnok.Left = 110;
-            btnok.Top = 160;
+            btnok.Top = 110;
             btnok.Parent = MessageboxForm;
             btnok.Text = "确定";
             MessageboxForm.AcceptButton = btnok;

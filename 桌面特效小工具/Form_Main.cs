@@ -8,6 +8,13 @@ using System.Runtime.InteropServices;
 using Microsoft.Win32;
 using LightControl;
 using Desk;
+using System.Text;
+using Newtonsoft.Json;
+using Setting.Model;
+using System.Threading;
+using System.Collections.Generic;
+using System.Net;
+using CCWin.SkinClass;
 
 namespace 桌面特效小工具
 {
@@ -17,6 +24,9 @@ namespace 桌面特效小工具
         {
             InitializeComponent();
         }
+        string receivePath = Application.StartupPath + "\\img\\";
+        string receivePath2 = Application.StartupPath + "\\img_back\\";
+        ImageList imgList = new ImageList();
         SystemVoid systemvoid = new SystemVoid();
         Form_SkinChang sc = new Form_SkinChang();
         bool FormOpenOrClose = true;
@@ -24,6 +34,11 @@ namespace 桌面特效小工具
         Form_Setting form_setting = new Form_Setting();
         Point downPoint;
         Form_Time form_time = new Form_Time();
+        FileReader fileready = new FileReader();
+        string path_desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)+"//";
+        string path_music = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "//多媒体文件//";
+        string path_debug = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "//可执行文件//";
+        string path_other = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "//其他文件//";
         //[StructLayout(LayoutKind.Sequential)]
         //public struct LASTINPUTINFO
         //{
@@ -43,7 +58,7 @@ namespace 桌面特效小工具
         //    if (!GetLastInputInfo(ref vLastInputInfo)) return 0;
         //    return (Environment.TickCount - (long)vLastInputInfo.dwTime)/1000;
         //}
-      
+
         private void Form1_Load(object sender, EventArgs e)
         {
             //this.WindowState = FormWindowState.Maximized;
@@ -72,12 +87,13 @@ namespace 桌面特效小工具
             if (usermessagebox.Form_min("提示信息", "是否最小化到任务栏图标？", "", "") ==true)
             {
                 timer_hide.Enabled = true;
-               
+                notifyIcon1.Visible = true;
                //最小化任务栏
             }
             else 
             {
                 timer_hide.Enabled = true;
+                this.Dispose();
             }
            
         }
@@ -108,6 +124,57 @@ namespace 桌面特效小工具
                 web.Url = new Uri(dir);
               
             }
+
+            if(tab_tool.SelectedTab.Name== "page_background")
+            {
+                if (!Directory.Exists(receivePath))
+                {
+                    Directory.CreateDirectory(receivePath);
+                }
+                if (!Directory.Exists(receivePath2))
+                {
+                    Directory.CreateDirectory(receivePath2);
+                }
+                imgList.ImageSize = new Size(90, 55);
+                imgList.ColorDepth = ColorDepth.Depth32Bit;
+                lvList.LargeImageList = imgList;
+                var hi = new HttpItem()
+                {
+                    Accept = "text/plain, */*; q=0.01",
+                    UserAgent = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36",
+                    Referer = "https://www.baidu.com/",
+                    URL = "https://www.baidu.com/home/skin/data/skin",
+                    Encoding = Encoding.UTF8
+                };
+                var http = new HttpHelper();
+                var html = http.GetHtml(hi);
+                var root = JsonConvert.DeserializeObject<Root>(html.Html);
+                foreach (var item in root.bsResult.data)
+                {
+                    if (item.type == "最近使用" || item.type == "自定义")
+                    {
+                        continue;
+                    }
+                    TreeNode tn = new TreeNode(item.type);
+
+                    if (item.bgitem != null)
+                    {
+                        tn.Tag = item.bgitem;
+                    }
+                        tvList.Nodes.Add(tn);
+                    if (item.starData != null)
+                    {
+
+                        foreach (var subItem in item.starData)
+                        {
+                            TreeNode subTN = new TreeNode(subItem.name);
+                            tn.Nodes.Add(subTN);
+                            subTN.Tag = subItem.list;
+                        }
+                    }
+                }
+            }
+
         }
 
         private void btn_setting_Click(object sender, EventArgs e)
@@ -250,7 +317,48 @@ namespace 桌面特效小工具
 
         private void skinButton4_Click_1(object sender, EventArgs e)
         {
-
+           
+            if (!Directory.Exists(path_music))
+            {
+                Directory.CreateDirectory(path_music);
+            }
+            if (!Directory.Exists(path_debug))
+            {
+                Directory.CreateDirectory(path_debug);
+            }
+            if (!Directory.Exists(path_other))
+            {
+                Directory.CreateDirectory(path_other);
+            }
+            DirectoryInfo TheFolder = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.Desktop));
+            List<string> ImgNames = new List<string>();
+            string allowtype = ".jpg.jpeg.png.bmp.mp3.avi.mov.flv.mp4.gif.3gp.swf";
+            string CanDebug = ".exe";
+            FileInfo[] Files = TheFolder.GetFiles();
+            //imageList1.ColorDepth = ColorDepth.Depth24Bit;
+            //imageList1.ImageSize = new Size(100, 100);
+            try
+            {
+                for (int i = 0; i < Files.Length; i++)
+                {
+                    if (Files[i].Length > 0 && allowtype.IndexOf(Files[i].Extension.ToLower()) > -1)
+                    {
+                        Files[i].MoveTo(path_music + Files[i].Name);
+                    }
+                    else if (Files[i].Length > 0 && CanDebug.IndexOf(Files[i].Extension.ToLower()) > -1)
+                    {
+                        Files[i].MoveTo(path_debug + Files[i].Name);
+                    }
+                    else
+                    {
+                        Files[i].MoveTo(path_other + Files[i].Name);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                usermessagebox.Print("异常提示", ex.ToString());
+            }
         }
         private void runJs(string str)
         {
@@ -351,6 +459,222 @@ namespace 桌面特效小工具
         private void cb_prected_CheckedChanged(object sender, EventArgs e)
         {if (timer_userNoDo.Enabled == false) { timer_userNoDo.Enabled = true; return; }
             if (timer_userNoDo.Enabled == true) { timer_userNoDo.Enabled = false; return; }
+        }
+
+        private void tvList_AfterSelect(object sender, TreeViewEventArgs e)
+        {   // for (int i = 0; i < e.Node.Nodes.Count; i++)
+        //    {
+        //        if (e.Node.Text == "女神降临"||e.Node.Text=="明星")
+        //        {
+        //            e.Node.Remove();
+        //        }
+        //    } 
+            if (e.Node.Nodes.Count == 0)
+            {
+                if (e.Node.Tag != null)
+                {
+                    gifLoading.Visible = true;
+                    imgList.Images.Clear();
+                    lvList.Items.Clear();
+                    GC.Collect();
+                    Application.DoEvents();
+                    Thread t = new Thread(new ThreadStart(() =>
+                    {
+                        List<starDataModel> bgitem = e.Node.Tag as List<starDataModel>;
+                        if (bgitem != null)
+                        {
+                            #region
+                            using (var countdown = new CountdownEvent(1))
+                            {
+                                foreach (var item in bgitem)
+                                {
+
+                                    ThreadPool.QueueUserWorkItem(delegate
+                                    {
+                                     
+                                        string URLAddress = @"https://ss1.bdstatic.com/kvoZeXSm1A5BphGlnYG/skin_plus/" + item.dataindex + ".jpg";
+
+                                        if (!File.Exists(receivePath + item.dataindex + ".jpg"))
+                                        {
+                                            try
+                                            {
+                                                using (WebClient client = new WebClient())
+                                                {
+                                                    client.DownloadFile(URLAddress, receivePath + Path.GetFileName(URLAddress));
+
+                                                }
+                                            }
+                                            catch (Exception)
+                                            {
+                                            }
+                                        }
+                                        this.Invoke(new ThreadStart(() =>
+                                        {
+                                            imgList.Images.Add(item.dataindex.ToString(), Image.FromFile(receivePath + item.dataindex + ".jpg"));
+                                        }));
+                                        this.Invoke(new ThreadStart(() =>
+                                        {
+                                            lvList.Items.Add(new ListViewItem()
+                                            {
+                                                ImageKey = item.dataindex.ToString(),
+                                                Name = string.Empty,
+                                                Tag = item.dataindex
+                                            });
+                                        }));
+                                        countdown.Signal();
+                                    });
+                                    countdown.AddCount();
+                                }
+                                countdown.Signal();
+                                countdown.Wait();
+                                this.Invoke(new ThreadStart(() => { gifLoading.Visible = false; }));
+
+                            }
+                            #endregion
+                        }
+                        else
+                        {
+
+                        }
+                    }));
+                    t.IsBackground = true;
+                    t.Start();
+                }
+            }
+        }
+        [DllImport("user32.dll", EntryPoint = "SystemParametersInfo")]
+        public static extern int SystemParametersInfo(
+         int uAction,
+         int uParam,
+         string lpvParam,
+         int fuWinIni
+      );
+        private void SetPic(int type)
+        {
+            if (lvList.SelectedItems.Count != 0)
+            {
+                Thread t = new Thread(new ThreadStart(() =>
+                {
+                    string id = string.Empty;
+                    this.Invoke(new ThreadStart(() =>
+                    {
+                        id = lvList.SelectedItems[0].Tag.ToString();
+                    }));
+
+                    //下载大图
+                    string URLAddress = @"https://ss3.bdstatic.com/iPoZeXSm1A5BphGlnYG/skin/" + id + ".jpg";
+                    WebClient client = new WebClient();
+                    try
+                    {
+                        client.DownloadFile(URLAddress, receivePath2 + System.IO.Path.GetFileName(URLAddress));
+                    }
+                    catch (Exception)
+                    {
+                        this.Invoke(new ThreadStart(() => { usermessagebox.Print("提示信息","主图下载失败，请检查您的网络或重试！"); }));
+
+                    }
+                    try
+                    {
+                        Image image = Image.FromFile(receivePath2 + id + ".jpg");
+                        image.Save(receivePath2 + id + ".bmp", System.Drawing.Imaging.ImageFormat.Bmp);
+                        SystemParametersInfo(20, type, receivePath2 + id + ".bmp", type);
+                    }
+                    catch (Exception ex)
+                    {
+                        this.Invoke(new ThreadStart(() => { MessageBox.Show("设置失败:" + Environment.NewLine + ex.ToString()); }));
+                        //MessageBox.Show("设置失败，请重试。");
+                    }
+                    this.Invoke(new ThreadStart(() => { usermessagebox.Print("提示信息", "设置成功！"); }));
+                }));
+                t.IsBackground = true;
+                t.Start();
+
+            }
+        }
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            SetPic(1);
+        }
+
+        private void 查看图片文件夹ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void skinButton3_Click(object sender, EventArgs e)
+        {
+            lvList .Items.Clear();
+            imgList.Images.Clear();
+
+            DirectoryInfo TheFolder = new DirectoryInfo(@"img");//文件路径
+            List<string> ImgNames = new List<string>();
+            string allowImg = ".jpg.jpeg.png.bmp";
+            FileInfo[] Files = TheFolder.GetFiles();
+            imgList.ImageSize = new Size(100, 100);
+            for (int i = 0; i < Files.Length; i++)//遍历文件夹
+            {
+                if (Files[i].Length > 0 && allowImg.IndexOf(Files[i].Extension.ToLower()) > -1)//或者jpg,png 文件大小要大于0且是图片文件
+                {
+                    Image image = Image.FromFile(Files[i].DirectoryName + "\\" + Files[i].Name);    //获取文件                 
+                    ImgNames.Add(Files[i].Name);//添加文件名                    
+                    imgList.Images.Add(image);//添加图片                   
+                }
+            }
+            //初始化设置
+            this.lvList .View = View.LargeIcon;
+            this.lvList .LargeImageList = this.imgList;
+            //开始绑定
+
+            this.lvList .BeginUpdate();
+
+            for (int i = 0; i < ImgNames.Count; i++)
+            {
+                // listView1.LargeImageList.Images.Add(list.Images.Keys[i], list.Images[i]);
+                ListViewItem lvi = new ListViewItem();
+                lvi.ImageIndex = i;
+                lvi.Text = ImgNames[i];
+                this.lvList .Items.Add(lvi);
+            }
+            this.lvList .EndUpdate();
+
+
+        }
+
+        private void skinButton5_Click(object sender, EventArgs e)
+        {
+            web.GoBack();
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            
+            this.Show();
+            systemvoid.ReturnFormSize("Form_Main");
+        }
+
+        private void skinButton6_Click(object sender, EventArgs e)
+        {
+            fileready.RemoveFile(path_music, path_desktop);
+            fileready.RemoveFile(path_debug, path_desktop);
+            fileready.RemoveFile(path_other, path_desktop);
+        }
+
+        private void skinRadioButton6_CheckedChanged(object sender, EventArgs e)
+        {
+            web.Url = new Uri(Path.GetFullPath(@"前端/弹幕特效.html"));
+            panel_web.Controls.Add(web);
+        }
+
+        private void skinRadioButton13_CheckedChanged(object sender, EventArgs e)
+        {
+            web.Url = new Uri(Path.GetFullPath(@"前端/Canvas扩散.html"));
+            panel_web.Controls.Add(web);
+        }
+
+        private void skinRadioButton5_CheckedChanged(object sender, EventArgs e)
+        {
+            web.Url = new Uri(Path.GetFullPath(@"前端/Rain.html"));
+            panel_web.Controls.Add(web);
         }
     }
 }

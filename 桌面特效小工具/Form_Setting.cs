@@ -41,21 +41,6 @@ namespace 桌面特效小工具
 
 
 
-        private void skinButton2_Click(object sender, EventArgs e)
-        {
-            try { 
-            MyApp.Default.userNoDoThing = (int)num_usernodo.Value*60;
-            if (tb_pwd.Text!="")MyApp.Default.userPwd = tb_pwd.Text;
-            MyApp.Default.DeskLoop =(int) num_loop.Value;
-            MyApp.Default.Time_Locked = (int)num_LockedTime.Value;
-            }
-            catch (Exception)
-            {
-
-            }
-
-        }
-
         private void cb_CloseTeskImg_CheckedChanged_1(object sender, EventArgs e)
         {
             systemvoid.CloseForm("Form_DeskImg");
@@ -69,8 +54,24 @@ namespace 桌面特效小工具
         private void btn_Close_Click(object sender, EventArgs e)
         {
             this.Hide();
+          
         }
 
-   
+        private void skinButton2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MyApp.Default.City = cb_city.Text;
+                MyApp.Default.userNoDoThing = (int)num_usernodo.Value * 60;
+                if (tb_pwd.Text != "") MyApp.Default.userPwd = tb_pwd.Text;
+                MyApp.Default.DeskLoop = (int)num_loop.Value;
+                MyApp.Default.Time_Locked = (int)num_LockedTime.Value;
+                MyApp.Default.Save();
+            }
+            catch (Exception)
+            {
+
+            }
+        }
     }
 }

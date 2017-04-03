@@ -33,6 +33,16 @@
             this.panel_tabcontrol = new CCWin.SkinControl.SkinPanel();
             this.tab_music = new CCWin.SkinControl.SkinTabControl();
             this.skinTabPage1 = new CCWin.SkinControl.SkinTabPage();
+            this.skinCheckBox3 = new CCWin.SkinControl.SkinCheckBox();
+            this.skinLabel8 = new CCWin.SkinControl.SkinLabel();
+            this.skinCheckBox2 = new CCWin.SkinControl.SkinCheckBox();
+            this.skinLabel7 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel6 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel5 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel4 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel3 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel2 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel1 = new CCWin.SkinControl.SkinLabel();
             this.cb_CloseTeskImg = new CCWin.SkinControl.SkinCheckBox();
             this.cb_locked = new CCWin.SkinControl.SkinCheckBox();
             this.cb_prected = new CCWin.SkinControl.SkinCheckBox();
@@ -42,19 +52,25 @@
             this.num_loop = new CCWin.SkinControl.SkinNumericUpDown();
             this.check_AutoLight = new CCWin.SkinControl.SkinCheckBox();
             this.trabar_light = new CCWin.SkinControl.SkinTrackBar();
-            this.label2 = new System.Windows.Forms.Label();
             this.num_usernodo = new CCWin.SkinControl.SkinNumericUpDown();
-            this.skinButton2 = new CCWin.SkinControl.SkinButton();
             this.skinTabPage2 = new CCWin.SkinControl.SkinTabPage();
+            this.skinComboBox4 = new CCWin.SkinControl.SkinComboBox();
+            this.skinLabel13 = new CCWin.SkinControl.SkinLabel();
+            this.skinComboBox3 = new CCWin.SkinControl.SkinComboBox();
+            this.skinLabel12 = new CCWin.SkinControl.SkinLabel();
+            this.skinComboBox2 = new CCWin.SkinControl.SkinComboBox();
+            this.skinLabel11 = new CCWin.SkinControl.SkinLabel();
+            this.skinComboBox1 = new CCWin.SkinControl.SkinComboBox();
+            this.skinLabel10 = new CCWin.SkinControl.SkinLabel();
+            this.cb_city = new CCWin.SkinControl.SkinComboBox();
+            this.skinLabel9 = new CCWin.SkinControl.SkinLabel();
+            this.skinTabPage3 = new CCWin.SkinControl.SkinTabPage();
             this.btn_Close = new CCWin.SkinControl.SkinButton();
-            this.skinLabel1 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel2 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel3 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel4 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel5 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel6 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel7 = new CCWin.SkinControl.SkinLabel();
             this.btn_mainpage = new CCWin.SkinControl.SkinButton();
+            this.skinButton2 = new CCWin.SkinControl.SkinButton();
+            this.skinTabPage4 = new CCWin.SkinControl.SkinTabPage();
+            this.skinButton1 = new CCWin.SkinControl.SkinButton();
+            this.skinButton3 = new CCWin.SkinControl.SkinButton();
             this.panel_tabcontrol.SuspendLayout();
             this.tab_music.SuspendLayout();
             this.skinTabPage1.SuspendLayout();
@@ -62,6 +78,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.num_loop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trabar_light)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_usernodo)).BeginInit();
+            this.skinTabPage2.SuspendLayout();
+            this.skinTabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_tabcontrol
@@ -88,7 +106,9 @@
             this.tab_music.BackColor = System.Drawing.Color.White;
             this.tab_music.CloseRect = new System.Drawing.Rectangle(2, 2, 12, 12);
             this.tab_music.Controls.Add(this.skinTabPage1);
+            this.tab_music.Controls.Add(this.skinTabPage4);
             this.tab_music.Controls.Add(this.skinTabPage2);
+            this.tab_music.Controls.Add(this.skinTabPage3);
             this.tab_music.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tab_music.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tab_music.HeadBack = null;
@@ -120,6 +140,12 @@
             // skinTabPage1
             // 
             this.skinTabPage1.BackColor = System.Drawing.Color.White;
+            this.skinTabPage1.Controls.Add(this.skinButton2);
+            this.skinTabPage1.Controls.Add(this.skinCheckBox3);
+            this.skinTabPage1.Controls.Add(this.skinLabel8);
+            this.skinTabPage1.Controls.Add(this.skinLabel9);
+            this.skinTabPage1.Controls.Add(this.cb_city);
+            this.skinTabPage1.Controls.Add(this.skinCheckBox2);
             this.skinTabPage1.Controls.Add(this.skinLabel7);
             this.skinTabPage1.Controls.Add(this.skinLabel6);
             this.skinTabPage1.Controls.Add(this.skinLabel5);
@@ -136,9 +162,7 @@
             this.skinTabPage1.Controls.Add(this.num_loop);
             this.skinTabPage1.Controls.Add(this.check_AutoLight);
             this.skinTabPage1.Controls.Add(this.trabar_light);
-            this.skinTabPage1.Controls.Add(this.label2);
             this.skinTabPage1.Controls.Add(this.num_usernodo);
-            this.skinTabPage1.Controls.Add(this.skinButton2);
             this.skinTabPage1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.skinTabPage1.Location = new System.Drawing.Point(130, 0);
             this.skinTabPage1.Name = "skinTabPage1";
@@ -146,6 +170,140 @@
             this.skinTabPage1.TabIndex = 0;
             this.skinTabPage1.TabItemImage = null;
             this.skinTabPage1.Text = "常规设置";
+            // 
+            // skinCheckBox3
+            // 
+            this.skinCheckBox3.AutoSize = true;
+            this.skinCheckBox3.BackColor = System.Drawing.Color.Transparent;
+            this.skinCheckBox3.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinCheckBox3.DownBack = null;
+            this.skinCheckBox3.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinCheckBox3.Location = new System.Drawing.Point(51, 241);
+            this.skinCheckBox3.MouseBack = null;
+            this.skinCheckBox3.Name = "skinCheckBox3";
+            this.skinCheckBox3.NormlBack = null;
+            this.skinCheckBox3.SelectedDownBack = null;
+            this.skinCheckBox3.SelectedMouseBack = null;
+            this.skinCheckBox3.SelectedNormlBack = null;
+            this.skinCheckBox3.Size = new System.Drawing.Size(84, 24);
+            this.skinCheckBox3.TabIndex = 74;
+            this.skinCheckBox3.Text = "开机自启";
+            this.skinCheckBox3.UseVisualStyleBackColor = false;
+            // 
+            // skinLabel8
+            // 
+            this.skinLabel8.AutoSize = true;
+            this.skinLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel8.BorderColor = System.Drawing.Color.White;
+            this.skinLabel8.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel8.Location = new System.Drawing.Point(12, 305);
+            this.skinLabel8.Name = "skinLabel8";
+            this.skinLabel8.Size = new System.Drawing.Size(107, 20);
+            this.skinLabel8.TabIndex = 73;
+            this.skinLabel8.Text = "屏幕饱和度调节";
+            // 
+            // skinCheckBox2
+            // 
+            this.skinCheckBox2.AutoSize = true;
+            this.skinCheckBox2.BackColor = System.Drawing.Color.Transparent;
+            this.skinCheckBox2.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinCheckBox2.DownBack = null;
+            this.skinCheckBox2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinCheckBox2.Location = new System.Drawing.Point(51, 211);
+            this.skinCheckBox2.MouseBack = null;
+            this.skinCheckBox2.Name = "skinCheckBox2";
+            this.skinCheckBox2.NormlBack = null;
+            this.skinCheckBox2.SelectedDownBack = null;
+            this.skinCheckBox2.SelectedMouseBack = null;
+            this.skinCheckBox2.SelectedNormlBack = null;
+            this.skinCheckBox2.Size = new System.Drawing.Size(140, 24);
+            this.skinCheckBox2.TabIndex = 72;
+            this.skinCheckBox2.Text = "一键关闭桌面时钟";
+            this.skinCheckBox2.UseVisualStyleBackColor = false;
+            // 
+            // skinLabel7
+            // 
+            this.skinLabel7.AutoSize = true;
+            this.skinLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel7.BorderColor = System.Drawing.Color.White;
+            this.skinLabel7.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel7.Location = new System.Drawing.Point(159, 47);
+            this.skinLabel7.Name = "skinLabel7";
+            this.skinLabel7.Size = new System.Drawing.Size(93, 20);
+            this.skinLabel7.TabIndex = 71;
+            this.skinLabel7.Text = "自动开启屏保";
+            // 
+            // skinLabel6
+            // 
+            this.skinLabel6.AutoSize = true;
+            this.skinLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel6.BorderColor = System.Drawing.Color.White;
+            this.skinLabel6.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel6.Location = new System.Drawing.Point(47, 47);
+            this.skinLabel6.Name = "skinLabel6";
+            this.skinLabel6.Size = new System.Drawing.Size(65, 20);
+            this.skinLabel6.TabIndex = 70;
+            this.skinLabel6.Text = "系统空闲";
+            // 
+            // skinLabel5
+            // 
+            this.skinLabel5.AutoSize = true;
+            this.skinLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel5.BorderColor = System.Drawing.Color.White;
+            this.skinLabel5.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel5.Location = new System.Drawing.Point(159, 79);
+            this.skinLabel5.Name = "skinLabel5";
+            this.skinLabel5.Size = new System.Drawing.Size(51, 20);
+            this.skinLabel5.TabIndex = 69;
+            this.skinLabel5.Text = "锁电脑";
+            // 
+            // skinLabel4
+            // 
+            this.skinLabel4.AutoSize = true;
+            this.skinLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel4.BorderColor = System.Drawing.Color.White;
+            this.skinLabel4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel4.Location = new System.Drawing.Point(47, 78);
+            this.skinLabel4.Name = "skinLabel4";
+            this.skinLabel4.Size = new System.Drawing.Size(65, 20);
+            this.skinLabel4.TabIndex = 68;
+            this.skinLabel4.Text = "系统空闲";
+            // 
+            // skinLabel3
+            // 
+            this.skinLabel3.AutoSize = true;
+            this.skinLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel3.BorderColor = System.Drawing.Color.White;
+            this.skinLabel3.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel3.Location = new System.Drawing.Point(414, 47);
+            this.skinLabel3.Name = "skinLabel3";
+            this.skinLabel3.Size = new System.Drawing.Size(37, 20);
+            this.skinLabel3.TabIndex = 67;
+            this.skinLabel3.Text = "分钟";
+            // 
+            // skinLabel2
+            // 
+            this.skinLabel2.AutoSize = true;
+            this.skinLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel2.BorderColor = System.Drawing.Color.White;
+            this.skinLabel2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel2.Location = new System.Drawing.Point(278, 47);
+            this.skinLabel2.Name = "skinLabel2";
+            this.skinLabel2.Size = new System.Drawing.Size(93, 20);
+            this.skinLabel2.TabIndex = 66;
+            this.skinLabel2.Text = "屏保循环间隔";
+            // 
+            // skinLabel1
+            // 
+            this.skinLabel1.AutoSize = true;
+            this.skinLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel1.BorderColor = System.Drawing.Color.White;
+            this.skinLabel1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel1.Location = new System.Drawing.Point(275, 79);
+            this.skinLabel1.Name = "skinLabel1";
+            this.skinLabel1.Size = new System.Drawing.Size(93, 20);
+            this.skinLabel1.TabIndex = 65;
+            this.skinLabel1.Text = "系统解锁密码";
             // 
             // cb_CloseTeskImg
             // 
@@ -283,24 +441,15 @@
             this.trabar_light.BarStyle = CCWin.SkinControl.HSLTrackBarStyle.Img;
             this.trabar_light.BaseColor = System.Drawing.Color.Transparent;
             this.trabar_light.LargeChange = 2;
-            this.trabar_light.Location = new System.Drawing.Point(102, 307);
+            this.trabar_light.Location = new System.Drawing.Point(125, 306);
             this.trabar_light.Maximum = 44;
             this.trabar_light.Minimum = 3;
             this.trabar_light.Name = "trabar_light";
-            this.trabar_light.Size = new System.Drawing.Size(281, 20);
+            this.trabar_light.Size = new System.Drawing.Size(264, 20);
             this.trabar_light.TabIndex = 53;
             this.trabar_light.Track = ((System.Drawing.Image)(resources.GetObject("trabar_light.Track")));
             this.trabar_light.Value = 3;
             this.trabar_light.Scroll += new System.EventHandler(this.trabar_light_Scroll);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 311);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 12);
-            this.label2.TabIndex = 52;
-            this.label2.Text = "屏幕饱和度调节";
             // 
             // num_usernodo
             // 
@@ -314,42 +463,171 @@
             this.num_usernodo.Size = new System.Drawing.Size(35, 21);
             this.num_usernodo.TabIndex = 51;
             // 
-            // skinButton2
-            // 
-            this.skinButton2.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("skinButton2.BackgroundImage")));
-            this.skinButton2.BaseColor = System.Drawing.Color.Transparent;
-            this.skinButton2.BorderColor = System.Drawing.Color.Transparent;
-            this.skinButton2.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton2.DownBack = ((System.Drawing.Image)(resources.GetObject("skinButton2.DownBack")));
-            this.skinButton2.DownBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton2.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.skinButton2.FadeGlow = false;
-            this.skinButton2.Font = new System.Drawing.Font("微软雅黑 Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinButton2.ForeColor = System.Drawing.Color.Transparent;
-            this.skinButton2.GlowColor = System.Drawing.Color.Transparent;
-            this.skinButton2.InnerBorderColor = System.Drawing.Color.Transparent;
-            this.skinButton2.Location = new System.Drawing.Point(410, 296);
-            this.skinButton2.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton2.MouseBack")));
-            this.skinButton2.MouseBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton2.Name = "skinButton2";
-            this.skinButton2.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton2.NormlBack")));
-            this.skinButton2.Size = new System.Drawing.Size(72, 34);
-            this.skinButton2.TabIndex = 49;
-            this.skinButton2.Text = "保存";
-            this.skinButton2.UseVisualStyleBackColor = true;
-            this.skinButton2.Click += new System.EventHandler(this.skinButton2_Click);
-            // 
             // skinTabPage2
             // 
             this.skinTabPage2.BackColor = System.Drawing.Color.White;
+            this.skinTabPage2.Controls.Add(this.skinButton3);
+            this.skinTabPage2.Controls.Add(this.skinComboBox4);
+            this.skinTabPage2.Controls.Add(this.skinLabel13);
+            this.skinTabPage2.Controls.Add(this.skinComboBox3);
+            this.skinTabPage2.Controls.Add(this.skinLabel12);
+            this.skinTabPage2.Controls.Add(this.skinComboBox2);
+            this.skinTabPage2.Controls.Add(this.skinLabel11);
+            this.skinTabPage2.Controls.Add(this.skinComboBox1);
+            this.skinTabPage2.Controls.Add(this.skinLabel10);
             this.skinTabPage2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.skinTabPage2.Location = new System.Drawing.Point(130, 0);
             this.skinTabPage2.Name = "skinTabPage2";
             this.skinTabPage2.Size = new System.Drawing.Size(508, 350);
             this.skinTabPage2.TabIndex = 1;
             this.skinTabPage2.TabItemImage = null;
-            this.skinTabPage2.Text = "主页加载项设置";
+            this.skinTabPage2.Text = "主页加载设置";
+            // 
+            // skinComboBox4
+            // 
+            this.skinComboBox4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.skinComboBox4.FormattingEnabled = true;
+            this.skinComboBox4.Items.AddRange(new object[] {
+            "福州",
+            "三明",
+            "莆田"});
+            this.skinComboBox4.Location = new System.Drawing.Point(219, 221);
+            this.skinComboBox4.Name = "skinComboBox4";
+            this.skinComboBox4.Size = new System.Drawing.Size(83, 22);
+            this.skinComboBox4.TabIndex = 80;
+            this.skinComboBox4.WaterText = "";
+            // 
+            // skinLabel13
+            // 
+            this.skinLabel13.AutoSize = true;
+            this.skinLabel13.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel13.BorderColor = System.Drawing.Color.White;
+            this.skinLabel13.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel13.Location = new System.Drawing.Point(34, 223);
+            this.skinLabel13.Name = "skinLabel13";
+            this.skinLabel13.Size = new System.Drawing.Size(121, 20);
+            this.skinLabel13.TabIndex = 79;
+            this.skinLabel13.Text = "主页一键设置壁纸";
+            // 
+            // skinComboBox3
+            // 
+            this.skinComboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.skinComboBox3.FormattingEnabled = true;
+            this.skinComboBox3.Items.AddRange(new object[] {
+            "福州",
+            "三明",
+            "莆田"});
+            this.skinComboBox3.Location = new System.Drawing.Point(219, 171);
+            this.skinComboBox3.Name = "skinComboBox3";
+            this.skinComboBox3.Size = new System.Drawing.Size(83, 22);
+            this.skinComboBox3.TabIndex = 78;
+            this.skinComboBox3.WaterText = "";
+            // 
+            // skinLabel12
+            // 
+            this.skinLabel12.AutoSize = true;
+            this.skinLabel12.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel12.BorderColor = System.Drawing.Color.White;
+            this.skinLabel12.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel12.Location = new System.Drawing.Point(34, 173);
+            this.skinLabel12.Name = "skinLabel12";
+            this.skinLabel12.Size = new System.Drawing.Size(121, 20);
+            this.skinLabel12.TabIndex = 77;
+            this.skinLabel12.Text = "主页一键文档整理";
+            // 
+            // skinComboBox2
+            // 
+            this.skinComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.skinComboBox2.FormattingEnabled = true;
+            this.skinComboBox2.Items.AddRange(new object[] {
+            "福州",
+            "三明",
+            "莆田"});
+            this.skinComboBox2.Location = new System.Drawing.Point(219, 126);
+            this.skinComboBox2.Name = "skinComboBox2";
+            this.skinComboBox2.Size = new System.Drawing.Size(83, 22);
+            this.skinComboBox2.TabIndex = 76;
+            this.skinComboBox2.WaterText = "";
+            // 
+            // skinLabel11
+            // 
+            this.skinLabel11.AutoSize = true;
+            this.skinLabel11.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel11.BorderColor = System.Drawing.Color.White;
+            this.skinLabel11.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel11.Location = new System.Drawing.Point(34, 128);
+            this.skinLabel11.Name = "skinLabel11";
+            this.skinLabel11.Size = new System.Drawing.Size(121, 20);
+            this.skinLabel11.TabIndex = 75;
+            this.skinLabel11.Text = "主页一键桌面特效";
+            // 
+            // skinComboBox1
+            // 
+            this.skinComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.skinComboBox1.FormattingEnabled = true;
+            this.skinComboBox1.Items.AddRange(new object[] {
+            "福州",
+            "三明",
+            "莆田"});
+            this.skinComboBox1.Location = new System.Drawing.Point(219, 79);
+            this.skinComboBox1.Name = "skinComboBox1";
+            this.skinComboBox1.Size = new System.Drawing.Size(83, 22);
+            this.skinComboBox1.TabIndex = 74;
+            this.skinComboBox1.WaterText = "";
+            // 
+            // skinLabel10
+            // 
+            this.skinLabel10.AutoSize = true;
+            this.skinLabel10.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel10.BorderColor = System.Drawing.Color.White;
+            this.skinLabel10.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel10.Location = new System.Drawing.Point(32, 81);
+            this.skinLabel10.Name = "skinLabel10";
+            this.skinLabel10.Size = new System.Drawing.Size(121, 20);
+            this.skinLabel10.TabIndex = 73;
+            this.skinLabel10.Text = "主页一键进入游戏";
+            // 
+            // cb_city
+            // 
+            this.cb_city.ArrowColor = System.Drawing.Color.Black;
+            this.cb_city.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cb_city.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.cb_city.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_city.FormattingEnabled = true;
+            this.cb_city.Items.AddRange(new object[] {
+            "福州",
+            "三明",
+            "莆田"});
+            this.cb_city.Location = new System.Drawing.Point(284, 13);
+            this.cb_city.MouseGradientColor = System.Drawing.Color.Transparent;
+            this.cb_city.Name = "cb_city";
+            this.cb_city.Size = new System.Drawing.Size(147, 22);
+            this.cb_city.TabIndex = 72;
+            this.cb_city.Text = "请输入或选择您的城市";
+            this.cb_city.WaterText = "";
+            // 
+            // skinLabel9
+            // 
+            this.skinLabel9.AutoSize = true;
+            this.skinLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel9.BorderColor = System.Drawing.Color.White;
+            this.skinLabel9.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel9.Location = new System.Drawing.Point(49, 15);
+            this.skinLabel9.Name = "skinLabel9";
+            this.skinLabel9.Size = new System.Drawing.Size(163, 20);
+            this.skinLabel9.TabIndex = 71;
+            this.skinLabel9.Text = "请选择默认城市天气查询";
+            // 
+            // skinTabPage3
+            // 
+            this.skinTabPage3.BackColor = System.Drawing.Color.White;
+            this.skinTabPage3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage3.Location = new System.Drawing.Point(130, 0);
+            this.skinTabPage3.Name = "skinTabPage3";
+            this.skinTabPage3.Size = new System.Drawing.Size(508, 350);
+            this.skinTabPage3.TabIndex = 2;
+            this.skinTabPage3.TabItemImage = null;
+            this.skinTabPage3.Text = "关于/接口";
             // 
             // btn_Close
             // 
@@ -376,90 +654,6 @@
             this.btn_Close.UseVisualStyleBackColor = false;
             this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             // 
-            // skinLabel1
-            // 
-            this.skinLabel1.AutoSize = true;
-            this.skinLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel1.BorderColor = System.Drawing.Color.White;
-            this.skinLabel1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel1.Location = new System.Drawing.Point(275, 79);
-            this.skinLabel1.Name = "skinLabel1";
-            this.skinLabel1.Size = new System.Drawing.Size(93, 20);
-            this.skinLabel1.TabIndex = 65;
-            this.skinLabel1.Text = "系统解锁密码";
-            // 
-            // skinLabel2
-            // 
-            this.skinLabel2.AutoSize = true;
-            this.skinLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel2.BorderColor = System.Drawing.Color.White;
-            this.skinLabel2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel2.Location = new System.Drawing.Point(278, 47);
-            this.skinLabel2.Name = "skinLabel2";
-            this.skinLabel2.Size = new System.Drawing.Size(93, 20);
-            this.skinLabel2.TabIndex = 66;
-            this.skinLabel2.Text = "屏保循环间隔";
-            // 
-            // skinLabel3
-            // 
-            this.skinLabel3.AutoSize = true;
-            this.skinLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel3.BorderColor = System.Drawing.Color.White;
-            this.skinLabel3.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel3.Location = new System.Drawing.Point(414, 47);
-            this.skinLabel3.Name = "skinLabel3";
-            this.skinLabel3.Size = new System.Drawing.Size(37, 20);
-            this.skinLabel3.TabIndex = 67;
-            this.skinLabel3.Text = "分钟";
-            // 
-            // skinLabel4
-            // 
-            this.skinLabel4.AutoSize = true;
-            this.skinLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel4.BorderColor = System.Drawing.Color.White;
-            this.skinLabel4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel4.Location = new System.Drawing.Point(47, 78);
-            this.skinLabel4.Name = "skinLabel4";
-            this.skinLabel4.Size = new System.Drawing.Size(65, 20);
-            this.skinLabel4.TabIndex = 68;
-            this.skinLabel4.Text = "系统空闲";
-            // 
-            // skinLabel5
-            // 
-            this.skinLabel5.AutoSize = true;
-            this.skinLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel5.BorderColor = System.Drawing.Color.White;
-            this.skinLabel5.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel5.Location = new System.Drawing.Point(159, 79);
-            this.skinLabel5.Name = "skinLabel5";
-            this.skinLabel5.Size = new System.Drawing.Size(51, 20);
-            this.skinLabel5.TabIndex = 69;
-            this.skinLabel5.Text = "锁电脑";
-            // 
-            // skinLabel6
-            // 
-            this.skinLabel6.AutoSize = true;
-            this.skinLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel6.BorderColor = System.Drawing.Color.White;
-            this.skinLabel6.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel6.Location = new System.Drawing.Point(47, 47);
-            this.skinLabel6.Name = "skinLabel6";
-            this.skinLabel6.Size = new System.Drawing.Size(65, 20);
-            this.skinLabel6.TabIndex = 70;
-            this.skinLabel6.Text = "系统空闲";
-            // 
-            // skinLabel7
-            // 
-            this.skinLabel7.AutoSize = true;
-            this.skinLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel7.BorderColor = System.Drawing.Color.White;
-            this.skinLabel7.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel7.Location = new System.Drawing.Point(159, 47);
-            this.skinLabel7.Name = "skinLabel7";
-            this.skinLabel7.Size = new System.Drawing.Size(93, 20);
-            this.skinLabel7.TabIndex = 71;
-            this.skinLabel7.Text = "自动开启屏保";
-            // 
             // btn_mainpage
             // 
             this.btn_mainpage.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -484,6 +678,94 @@
             this.btn_mainpage.TabIndex = 67;
             this.btn_mainpage.UseVisualStyleBackColor = false;
             // 
+            // skinButton2
+            // 
+            this.skinButton2.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("skinButton2.BackgroundImage")));
+            this.skinButton2.BaseColor = System.Drawing.Color.Transparent;
+            this.skinButton2.BorderColor = System.Drawing.Color.Transparent;
+            this.skinButton2.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton2.DownBack = ((System.Drawing.Image)(resources.GetObject("skinButton2.DownBack")));
+            this.skinButton2.DownBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton2.DrawType = CCWin.SkinControl.DrawStyle.Img;
+            this.skinButton2.FadeGlow = false;
+            this.skinButton2.Font = new System.Drawing.Font("微软雅黑 Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinButton2.ForeColor = System.Drawing.Color.Transparent;
+            this.skinButton2.GlowColor = System.Drawing.Color.Transparent;
+            this.skinButton2.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.skinButton2.Location = new System.Drawing.Point(418, 291);
+            this.skinButton2.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton2.MouseBack")));
+            this.skinButton2.MouseBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton2.Name = "skinButton2";
+            this.skinButton2.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton2.NormlBack")));
+            this.skinButton2.Size = new System.Drawing.Size(72, 34);
+            this.skinButton2.TabIndex = 68;
+            this.skinButton2.Text = "保存";
+            this.skinButton2.UseVisualStyleBackColor = true;
+            this.skinButton2.Click += new System.EventHandler(this.skinButton2_Click);
+            // 
+            // skinTabPage4
+            // 
+            this.skinTabPage4.BackColor = System.Drawing.Color.White;
+            this.skinTabPage4.Controls.Add(this.skinButton1);
+            this.skinTabPage4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage4.Location = new System.Drawing.Point(130, 0);
+            this.skinTabPage4.Name = "skinTabPage4";
+            this.skinTabPage4.Size = new System.Drawing.Size(508, 350);
+            this.skinTabPage4.TabIndex = 3;
+            this.skinTabPage4.TabItemImage = null;
+            this.skinTabPage4.Text = "参数设置";
+            // 
+            // skinButton1
+            // 
+            this.skinButton1.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("skinButton1.BackgroundImage")));
+            this.skinButton1.BaseColor = System.Drawing.Color.Transparent;
+            this.skinButton1.BorderColor = System.Drawing.Color.Transparent;
+            this.skinButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton1.DownBack = ((System.Drawing.Image)(resources.GetObject("skinButton1.DownBack")));
+            this.skinButton1.DownBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton1.DrawType = CCWin.SkinControl.DrawStyle.Img;
+            this.skinButton1.FadeGlow = false;
+            this.skinButton1.Font = new System.Drawing.Font("微软雅黑 Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinButton1.ForeColor = System.Drawing.Color.Transparent;
+            this.skinButton1.GlowColor = System.Drawing.Color.Transparent;
+            this.skinButton1.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.skinButton1.Location = new System.Drawing.Point(418, 291);
+            this.skinButton1.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton1.MouseBack")));
+            this.skinButton1.MouseBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton1.Name = "skinButton1";
+            this.skinButton1.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton1.NormlBack")));
+            this.skinButton1.Size = new System.Drawing.Size(72, 34);
+            this.skinButton1.TabIndex = 69;
+            this.skinButton1.Text = "保存";
+            this.skinButton1.UseVisualStyleBackColor = true;
+            // 
+            // skinButton3
+            // 
+            this.skinButton3.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("skinButton3.BackgroundImage")));
+            this.skinButton3.BaseColor = System.Drawing.Color.Transparent;
+            this.skinButton3.BorderColor = System.Drawing.Color.Transparent;
+            this.skinButton3.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton3.DownBack = ((System.Drawing.Image)(resources.GetObject("skinButton3.DownBack")));
+            this.skinButton3.DownBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton3.DrawType = CCWin.SkinControl.DrawStyle.Img;
+            this.skinButton3.FadeGlow = false;
+            this.skinButton3.Font = new System.Drawing.Font("微软雅黑 Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinButton3.ForeColor = System.Drawing.Color.Transparent;
+            this.skinButton3.GlowColor = System.Drawing.Color.Transparent;
+            this.skinButton3.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.skinButton3.Location = new System.Drawing.Point(418, 291);
+            this.skinButton3.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton3.MouseBack")));
+            this.skinButton3.MouseBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton3.Name = "skinButton3";
+            this.skinButton3.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton3.NormlBack")));
+            this.skinButton3.Size = new System.Drawing.Size(72, 34);
+            this.skinButton3.TabIndex = 81;
+            this.skinButton3.Text = "保存";
+            this.skinButton3.UseVisualStyleBackColor = true;
+            // 
             // Form_Setting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -493,10 +775,12 @@
             this.Controls.Add(this.btn_mainpage);
             this.Controls.Add(this.btn_Close);
             this.Controls.Add(this.panel_tabcontrol);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Setting";
             this.ShowDrawIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Form_Setting_Load);
             this.panel_tabcontrol.ResumeLayout(false);
             this.tab_music.ResumeLayout(false);
@@ -506,6 +790,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.num_loop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trabar_light)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_usernodo)).EndInit();
+            this.skinTabPage2.ResumeLayout(false);
+            this.skinTabPage2.PerformLayout();
+            this.skinTabPage4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -523,9 +810,7 @@
         private CCWin.SkinControl.SkinNumericUpDown num_loop;
         private CCWin.SkinControl.SkinCheckBox check_AutoLight;
         private CCWin.SkinControl.SkinTrackBar trabar_light;
-        private System.Windows.Forms.Label label2;
         private CCWin.SkinControl.SkinNumericUpDown num_usernodo;
-        private CCWin.SkinControl.SkinButton skinButton2;
         private CCWin.SkinControl.SkinTabPage skinTabPage2;
         private CCWin.SkinControl.SkinButton btn_Close;
         private CCWin.SkinControl.SkinLabel skinLabel2;
@@ -536,5 +821,23 @@
         private CCWin.SkinControl.SkinLabel skinLabel4;
         private CCWin.SkinControl.SkinLabel skinLabel3;
         private CCWin.SkinControl.SkinButton btn_mainpage;
+        private CCWin.SkinControl.SkinCheckBox skinCheckBox2;
+        private CCWin.SkinControl.SkinLabel skinLabel8;
+        private CCWin.SkinControl.SkinCheckBox skinCheckBox3;
+        private CCWin.SkinControl.SkinTabPage skinTabPage3;
+        private CCWin.SkinControl.SkinLabel skinLabel9;
+        private CCWin.SkinControl.SkinComboBox cb_city;
+        private CCWin.SkinControl.SkinButton skinButton2;
+        private CCWin.SkinControl.SkinLabel skinLabel11;
+        private CCWin.SkinControl.SkinComboBox skinComboBox1;
+        private CCWin.SkinControl.SkinLabel skinLabel10;
+        private CCWin.SkinControl.SkinLabel skinLabel12;
+        private CCWin.SkinControl.SkinComboBox skinComboBox2;
+        private CCWin.SkinControl.SkinLabel skinLabel13;
+        private CCWin.SkinControl.SkinComboBox skinComboBox3;
+        private CCWin.SkinControl.SkinComboBox skinComboBox4;
+        private CCWin.SkinControl.SkinTabPage skinTabPage4;
+        private CCWin.SkinControl.SkinButton skinButton1;
+        private CCWin.SkinControl.SkinButton skinButton3;
     }
 }

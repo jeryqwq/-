@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 using CCWin;
+using System.Drawing;
+
 namespace 桌面特效小工具
 {
     public partial class Form_SkinChang : CCSkinMain
@@ -82,6 +84,11 @@ namespace 桌面特效小工具
             MyApp.Default.Path_background = file;
             MyApp.Default.Save();
             }
+        }
+
+        private void Form_SkinChang_MouseLeave(object sender, EventArgs e)
+        {
+
         }
     }
 }

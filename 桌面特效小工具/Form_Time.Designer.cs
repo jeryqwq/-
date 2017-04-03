@@ -34,13 +34,13 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.menu_colck = new CCWin.SkinControl.SkinContextMenuStrip();
             this.返回主界面ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.小组ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.主页ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.炫彩皮肤ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.扁平化时钟ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.金属风格ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.闹钟样式ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.设置中心ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.小组ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.软件源码ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_colck.SuspendLayout();
@@ -77,9 +77,9 @@
             this.menu_colck.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.menu_colck.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.返回主界面ToolStripMenuItem,
+            this.小组ToolStripMenuItem,
             this.主页ToolStripMenuItem,
             this.设置中心ToolStripMenuItem,
-            this.小组ToolStripMenuItem,
             this.toolStripMenuItem1,
             this.软件源码ToolStripMenuItem});
             this.menu_colck.ItemSplitter = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
@@ -99,6 +99,14 @@
             this.返回主界面ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.返回主界面ToolStripMenuItem.Text = "返回主界面";
             this.返回主界面ToolStripMenuItem.Click += new System.EventHandler(this.返回主界面ToolStripMenuItem_Click);
+            // 
+            // 小组ToolStripMenuItem
+            // 
+            this.小组ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("小组ToolStripMenuItem.Image")));
+            this.小组ToolStripMenuItem.Name = "小组ToolStripMenuItem";
+            this.小组ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.小组ToolStripMenuItem.Text = "数字时钟";
+            this.小组ToolStripMenuItem.Click += new System.EventHandler(this.小组ToolStripMenuItem_Click);
             // 
             // 主页ToolStripMenuItem
             // 
@@ -154,14 +162,6 @@
             this.设置中心ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.设置中心ToolStripMenuItem.Text = "总在最前";
             this.设置中心ToolStripMenuItem.Click += new System.EventHandler(this.设置中心ToolStripMenuItem_Click);
-            // 
-            // 小组ToolStripMenuItem
-            // 
-            this.小组ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("小组ToolStripMenuItem.Image")));
-            this.小组ToolStripMenuItem.Name = "小组ToolStripMenuItem";
-            this.小组ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.小组ToolStripMenuItem.Text = "透过鼠标";
-            this.小组ToolStripMenuItem.Click += new System.EventHandler(this.小组ToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 

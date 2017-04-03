@@ -193,6 +193,8 @@ namespace clock
 /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
+
+         
             if (MyApp.Default.ClockStyle == "UiDesign") UiDesign();
             if (MyApp.Default.ClockStyle == "Colorful") Colorful();
             if (MyApp.Default.ClockStyle == "Clock") Clock();
@@ -307,9 +309,12 @@ namespace clock
         //        catch { MessageBox.Show("取消失败"); }
         //    }
         //}
+        Form_NumClock numclock = new Form_NumClock();
 
         private void 小组ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            numclock.Show();
+            this.Hide();
     CanPenetrate(); 
 
         }
