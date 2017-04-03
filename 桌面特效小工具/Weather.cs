@@ -21,12 +21,14 @@ namespace 桌面特效小工具
             {
 
                 return MyApp.Default.City_Info; //"请输入正确的城市，例:福州/三明/莆田，不需加后缀,应免费API需要，查询次数系统有限制，请见谅！";
+                //如果查询失败，一般都是Web接口被限制了，则返回上次保存的查询数据。
             }
             else
             {
                 MyApp.Default.City_Info = (s[1] + " " + s[6] + "/t" + s[10]).ToString();
                 MyApp.Default.Save();
                 return (s[1] + " " + s[6] + "/t" + s[10]).ToString();
+                //查询成功！返回web服务返回的数据
                
             }
         }

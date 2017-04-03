@@ -37,7 +37,7 @@ namespace 桌面特效小工具
         FileReader fileready = new FileReader();
         string path_desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)+"//";
         string path_music = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "//多媒体文件//";
-        string path_debug = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "//可执行文件//";
+      //  string path_debug = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "//可执行文件//";
         string path_other = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "//其他文件//";
         //[StructLayout(LayoutKind.Sequential)]
         //public struct LASTINPUTINFO
@@ -333,7 +333,6 @@ namespace 桌面特效小工具
             DirectoryInfo TheFolder = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.Desktop));
             List<string> ImgNames = new List<string>();
             string allowtype = ".jpg.jpeg.png.bmp.mp3.avi.mov.flv.mp4.gif.3gp.swf";
-            string CanDebug = ".exe";
             FileInfo[] Files = TheFolder.GetFiles();
             //imageList1.ColorDepth = ColorDepth.Depth24Bit;
             //imageList1.ImageSize = new Size(100, 100);
@@ -344,10 +343,6 @@ namespace 桌面特效小工具
                     if (Files[i].Length > 0 && allowtype.IndexOf(Files[i].Extension.ToLower()) > -1)
                     {
                         Files[i].MoveTo(path_music + Files[i].Name);
-                    }
-                    else if (Files[i].Length > 0 && CanDebug.IndexOf(Files[i].Extension.ToLower()) > -1)
-                    {
-                        Files[i].MoveTo(path_debug + Files[i].Name);
                     }
                     else
                     {
