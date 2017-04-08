@@ -101,4 +101,5 @@ class Win32
     int dwFlags
     );
     #endregion
+
 }

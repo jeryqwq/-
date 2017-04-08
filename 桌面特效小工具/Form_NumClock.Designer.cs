@@ -146,7 +146,7 @@
             // 
             this.小组ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("小组ToolStripMenuItem.Image")));
             this.小组ToolStripMenuItem.Name = "小组ToolStripMenuItem";
-            this.小组ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.小组ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.小组ToolStripMenuItem.Text = "经典时钟";
             this.小组ToolStripMenuItem.Click += new System.EventHandler(this.小组ToolStripMenuItem_Click);
             // 
@@ -155,13 +155,14 @@
             this.设置中心ToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.设置中心ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("设置中心ToolStripMenuItem.Image")));
             this.设置中心ToolStripMenuItem.Name = "设置中心ToolStripMenuItem";
-            this.设置中心ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.设置中心ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.设置中心ToolStripMenuItem.Text = "总在最前";
             // 
             // lb_weather2
             // 
             this.lb_weather2.BackColor = System.Drawing.Color.Transparent;
             this.lb_weather2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lb_weather2.ForeColor = System.Drawing.Color.White;
             this.lb_weather2.Location = new System.Drawing.Point(19, 78);
             this.lb_weather2.Name = "lb_weather2";
             this.lb_weather2.Size = new System.Drawing.Size(237, 67);

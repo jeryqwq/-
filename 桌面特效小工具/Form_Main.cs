@@ -61,6 +61,7 @@ namespace 桌面特效小工具
 
         private void Form1_Load(object sender, EventArgs e)
         {
+           // usermessagebox.Print(AboutHttp.IsConnectInt().ToString(), AboutHttp.IsConnectInt().ToString());
             //this.WindowState = FormWindowState.Maximized;
             this.BackgroundImage = Image.FromFile(MyApp.Default.Path_background);
             tab_tool.SelectedIndex = 0;
@@ -84,7 +85,14 @@ namespace 桌面特效小工具
     
         private void btn_Close_Click(object sender, EventArgs e)
         {
+
             tab_tool.SelectedIndex = 0;
+            if (MyApp.Default.AlwaysMin == true)
+            {
+                timer_hide.Enabled = true;
+                notifyIcon1.Visible = true;
+                return;
+            }
             if (usermessagebox.Form_min("提示信息", "是否最小化到任务栏图标？", "", "") ==true)
             {
               
@@ -121,7 +129,7 @@ namespace 桌面特效小工具
             }
 
 
-            if(tab_tool.SelectedTab.Name== "page_background")
+            if (tab_tool.SelectedTab.Name == "page_background")
             {
                 if (!Directory.Exists(receivePath))
                 {
@@ -131,46 +139,53 @@ namespace 桌面特效小工具
                 {
                     Directory.CreateDirectory(receivePath2);
                 }
-                imgList.ImageSize = new Size(90, 55);
-                imgList.ColorDepth = ColorDepth.Depth32Bit;
-                lvList.LargeImageList = imgList;
-                var hi = new HttpItem()
-                {
-                    Accept = "text/plain, */*; q=0.01",
-                    UserAgent = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36",
-                    Referer = "https://www.baidu.com/",
-                    URL = "https://www.baidu.com/home/skin/data/skin",
-                    Encoding = Encoding.UTF8
-                };
-                var http = new HttpHelper();
-                var html = http.GetHtml(hi);
-                var root = JsonConvert.DeserializeObject<Root>(html.Html);
-                foreach (var item in root.bsResult.data)
-                {
-                    if (item.type == "最近使用" || item.type == "自定义")
+                if (AboutHttp.IsConnectInt() == true)
+                { 
+                    imgList.ImageSize = new Size(90, 55);
+                    imgList.ColorDepth = ColorDepth.Depth32Bit;
+                    lvList.LargeImageList = imgList;
+                    var hi = new HttpItem()
                     {
-                        continue;
-                    }
-                    TreeNode tn = new TreeNode(item.type);
-
-                    if (item.bgitem != null)
+                        Accept = "text/plain, */*; q=0.01",
+                        UserAgent = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36",
+                        Referer = "https://www.baidu.com/",
+                        URL = "https://www.baidu.com/home/skin/data/skin",
+                        Encoding = Encoding.UTF8
+                    };
+                    var http = new HttpHelper();
+                    var html = http.GetHtml(hi);
+                    var root = JsonConvert.DeserializeObject<Root>(html.Html);
+                    foreach (var item in root.bsResult.data)
                     {
-                        tn.Tag = item.bgitem;
-                    }
-                        tvList.Nodes.Add(tn);
-                    if (item.starData != null)
-                    {
-
-                        foreach (var subItem in item.starData)
+                        if (item.type == "最近使用" || item.type == "自定义")
                         {
-                            TreeNode subTN = new TreeNode(subItem.name);
-                            tn.Nodes.Add(subTN);
-                            subTN.Tag = subItem.list;
+                            continue;
+                        }
+                        TreeNode tn = new TreeNode(item.type);
+
+                        if (item.bgitem != null)
+                        {
+                            tn.Tag = item.bgitem;
+                        }
+                        if (tn.Text != "女神降临" && tn.Text != "明星") tvList.Nodes.Add(tn);
+                        if (item.starData != null)
+                        {
+
+                            foreach (var subItem in item.starData)
+                            {
+                                TreeNode subTN = new TreeNode(subItem.name);
+                                tn.Nodes.Add(subTN);
+                                subTN.Tag = subItem.list;
+                            }
                         }
                     }
                 }
+                else if (AboutHttp.IsConnectInt() == false)
+                {
+                    usermessagebox.Print("提示信息", "您处于离线模式，已切换到本地缓存视图，请检查您的网络连接后重试！\r本地缓存视图无法加载小图和设置壁纸");
+                }
             }
-
+           
         }
 
         private void btn_setting_Click(object sender, EventArgs e)
@@ -202,7 +217,8 @@ namespace 桌面特效小工具
             {
                 FormOpenOrClose = true;
                 sc.Hide();
-            }
+
+           }
         }
 
 
@@ -214,6 +230,7 @@ namespace 桌面特效小工具
                 this.WindowState = FormWindowState.Normal;
                 panel_tabcontrol.Visible = true;
                 pan_SysBtn.Visible = true;
+                btn_ChangClocl.Visible = true;
                 panel_web.Controls.Add(web);
             }
         }
@@ -225,14 +242,7 @@ namespace 桌面特效小工具
 
         private void 设置中心ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            foreach (TabPage tp in tab_tool.TabPages)
-            {
-                if (tp.Name == "page_setting")
-                {
-                    this.tab_tool.SelectedTab = tp;
-                    break;
-                }
-            }
+            form_setting.Show();
         }
 
         private void 小组ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -244,7 +254,9 @@ namespace 桌面特效小工具
 
         private void skinRadioButton10_CheckedChanged_1(object sender, EventArgs e)
         {
+            
             web.Url = new Uri(Path.GetFullPath(@"前端/黑客帝国.html"));
+            runJs(Js.SetJsCode(""));
             panel_web.Controls.Add(web);
         }
 
@@ -448,13 +460,7 @@ namespace 桌面特效小工具
         }
 
         private void tvList_AfterSelect(object sender, TreeViewEventArgs e)
-        {   // for (int i = 0; i < e.Node.Nodes.Count; i++)
-        //    {
-        //        if (e.Node.Text == "女神降临"||e.Node.Text=="明星")
-        //        {
-        //            e.Node.Remove();
-        //        }
-        //    } 
+        { 
             if (e.Node.Nodes.Count == 0)
             {
                 if (e.Node.Tag != null)
@@ -667,6 +673,24 @@ namespace 桌面特效小工具
         {
             panel_webFile.Controls.Add(web);
             web.Url = new Uri(Environment.GetFolderPath(Environment.SpecialFolder.Desktop));
+        }
+
+        private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (usermessagebox.Form_CloseView("提示信息", "警告！是否关闭并施放所有占用资源？这样会关闭整个\n进程,包括主界面！！！") == false)
+            {
+                this.Dispose();
+                Application.ExitThread();
+            }
+        }
+
+
+
+
+
+        private void skinButton2_Click(object sender, EventArgs e)
+        {
+            runJs(Js.SetJsCode(""));
         }
     }
 }

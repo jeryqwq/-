@@ -178,5 +178,17 @@ namespace 桌面特效小工具 {
                 this["City_Info"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool AlwaysMin {
+            get {
+                return ((bool)(this["AlwaysMin"]));
+            }
+            set {
+                this["AlwaysMin"] = value;
+            }
+        }
     }
 }

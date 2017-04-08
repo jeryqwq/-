@@ -15,7 +15,7 @@ namespace 桌面特效小工具
     class UserMessagebox
     {
         /// <summary>
-        /// 退出messagebox的重绘，含下次开机自启动按钮
+        /// 退出messagebox的重绘，含总是最小化到任务栏
         /// </summary>
         /// <param name="title"></param>
         /// <param name="text"></param>
@@ -28,6 +28,7 @@ namespace 桌面特效小工具
         public bool Form_min(string title, string text, string text1, string text2)
         {
             CCSkinMain MessageboxForm = new CCSkinMain();
+            MessageboxForm.CanResize = false;
             MessageboxForm.MinimizeBox = false;
             MessageboxForm.MaximizeBox = false;
             MessageboxForm.ControlBox = true;
@@ -104,7 +105,7 @@ namespace 桌面特效小工具
             ziqi.Left = 10;
             ziqi.Top = 120;
             ziqi.Parent = MessageboxForm;
-            ziqi.Text = "是否下次开机自启";
+            ziqi.Text = "总是最小化到任务栏";
             ziqi.FlatStyle = FlatStyle.Flat;
             ziqi.BackColor = Color.Transparent;
             ziqi.CheckedChanged += new EventHandler(this.ziqi_CheckedChanged);
@@ -133,10 +134,7 @@ namespace 桌面特效小工具
             }
 
         }
-
-     
-
-
+       
         /// <summary>
         /// 开机自启动方法
         /// </summary>
@@ -144,7 +142,8 @@ namespace 桌面特效小工具
         /// <param name="e"></param>
         public void ziqi_CheckedChanged(object sender, EventArgs e)
         {
-
+            MyApp.Default.AlwaysMin = true;
+            MyApp.Default.Save();
         }
         /// <summary>
         /// 为确定按钮生成Click事件
@@ -153,7 +152,7 @@ namespace 桌面特效小工具
         /// <param name="e"></param>
         public void btn_Click(object sender, EventArgs e)
         {
-            systemvoid.CloseForm("Form_Main");
+           // systemvoid.CloseForm("Form_Main");
 
         }
         /// <summary>
@@ -167,6 +166,7 @@ namespace 桌面特效小工具
         public string InputForm(string Caption, string title, string text, string type)
         {
             CCSkinMain MessageboxForm = new CCSkinMain();
+            MessageboxForm.CanResize = false;
             MessageboxForm.MinimizeBox = false;
             MessageboxForm.MaximizeBox = false;
             MessageboxForm.ControlBox = true;
@@ -254,6 +254,7 @@ namespace 桌面特效小工具
         {
             CCSkinMain MessageboxForm = new CCSkinMain();
             MessageboxForm.MinimizeBox = false;
+            MessageboxForm.CanResize = false;
             MessageboxForm.MaximizeBox = false;
             MessageboxForm.ControlBox = true;
             MessageboxForm.Location = new Point(100, 200);
@@ -316,6 +317,7 @@ namespace 桌面特效小工具
             CCSkinMain MessageboxForm = new CCSkinMain();
             MessageboxForm.BackgroundImageLayout = ImageLayout.Stretch;
             MessageboxForm.AllowDrop = true;
+            MessageboxForm.CanResize = false;
             MessageboxForm.MinimizeBox = false;
             MessageboxForm.MaximizeBox = false;
             MessageboxForm.ControlBox = true;

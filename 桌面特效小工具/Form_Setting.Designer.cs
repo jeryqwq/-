@@ -56,8 +56,6 @@
             this.check_AutoLight = new CCWin.SkinControl.SkinCheckBox();
             this.trabar_light = new CCWin.SkinControl.SkinTrackBar();
             this.num_usernodo = new CCWin.SkinControl.SkinNumericUpDown();
-            this.skinTabPage4 = new CCWin.SkinControl.SkinTabPage();
-            this.skinButton1 = new CCWin.SkinControl.SkinButton();
             this.skinTabPage2 = new CCWin.SkinControl.SkinTabPage();
             this.skinButton3 = new CCWin.SkinControl.SkinButton();
             this.skinComboBox4 = new CCWin.SkinControl.SkinComboBox();
@@ -69,12 +67,13 @@
             this.skinComboBox1 = new CCWin.SkinControl.SkinComboBox();
             this.skinLabel10 = new CCWin.SkinControl.SkinLabel();
             this.skinTabPage3 = new CCWin.SkinControl.SkinTabPage();
+            this.skinLabel14 = new CCWin.SkinControl.SkinLabel();
+            this.skinChatRichTextBox1 = new CCWin.SkinControl.SkinChatRichTextBox();
             this.btn_Close = new CCWin.SkinControl.SkinButton();
             this.btn_mainpage = new CCWin.SkinControl.SkinButton();
-            this.skinChatRichTextBox1 = new CCWin.SkinControl.SkinChatRichTextBox();
-            this.skinLabel14 = new CCWin.SkinControl.SkinLabel();
             this.control1 = new System.Windows.Forms.Control();
             this.control2 = new System.Windows.Forms.Control();
+            this.skinCheckBox4 = new CCWin.SkinControl.SkinCheckBox();
             this.panel_tabcontrol.SuspendLayout();
             this.tab_music.SuspendLayout();
             this.skinTabPage1.SuspendLayout();
@@ -82,7 +81,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.num_loop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trabar_light)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_usernodo)).BeginInit();
-            this.skinTabPage4.SuspendLayout();
             this.skinTabPage2.SuspendLayout();
             this.skinTabPage3.SuspendLayout();
             this.SuspendLayout();
@@ -111,7 +109,6 @@
             this.tab_music.BackColor = System.Drawing.Color.White;
             this.tab_music.CloseRect = new System.Drawing.Rectangle(2, 2, 12, 12);
             this.tab_music.Controls.Add(this.skinTabPage1);
-            this.tab_music.Controls.Add(this.skinTabPage4);
             this.tab_music.Controls.Add(this.skinTabPage2);
             this.tab_music.Controls.Add(this.skinTabPage3);
             this.tab_music.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -145,6 +142,7 @@
             // skinTabPage1
             // 
             this.skinTabPage1.BackColor = System.Drawing.Color.White;
+            this.skinTabPage1.Controls.Add(this.skinCheckBox4);
             this.skinTabPage1.Controls.Add(this.skinButton2);
             this.skinTabPage1.Controls.Add(this.skinCheckBox3);
             this.skinTabPage1.Controls.Add(this.skinLabel8);
@@ -256,7 +254,9 @@
             this.cb_city.Items.AddRange(new object[] {
             "福州",
             "三明",
-            "莆田"});
+            "莆田",
+            "永泰",
+            "闽侯"});
             this.cb_city.Location = new System.Drawing.Point(284, 13);
             this.cb_city.MouseGradientColor = System.Drawing.Color.Transparent;
             this.cb_city.Name = "cb_city";
@@ -526,43 +526,6 @@
             this.num_usernodo.Size = new System.Drawing.Size(35, 21);
             this.num_usernodo.TabIndex = 51;
             // 
-            // skinTabPage4
-            // 
-            this.skinTabPage4.BackColor = System.Drawing.Color.White;
-            this.skinTabPage4.Controls.Add(this.skinButton1);
-            this.skinTabPage4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabPage4.Location = new System.Drawing.Point(130, 0);
-            this.skinTabPage4.Name = "skinTabPage4";
-            this.skinTabPage4.Size = new System.Drawing.Size(508, 350);
-            this.skinTabPage4.TabIndex = 3;
-            this.skinTabPage4.TabItemImage = null;
-            this.skinTabPage4.Text = "参数设置";
-            // 
-            // skinButton1
-            // 
-            this.skinButton1.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("skinButton1.BackgroundImage")));
-            this.skinButton1.BaseColor = System.Drawing.Color.Transparent;
-            this.skinButton1.BorderColor = System.Drawing.Color.Transparent;
-            this.skinButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton1.DownBack = ((System.Drawing.Image)(resources.GetObject("skinButton1.DownBack")));
-            this.skinButton1.DownBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton1.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.skinButton1.FadeGlow = false;
-            this.skinButton1.Font = new System.Drawing.Font("微软雅黑 Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinButton1.ForeColor = System.Drawing.Color.Transparent;
-            this.skinButton1.GlowColor = System.Drawing.Color.Transparent;
-            this.skinButton1.InnerBorderColor = System.Drawing.Color.Transparent;
-            this.skinButton1.Location = new System.Drawing.Point(418, 291);
-            this.skinButton1.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton1.MouseBack")));
-            this.skinButton1.MouseBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton1.Name = "skinButton1";
-            this.skinButton1.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton1.NormlBack")));
-            this.skinButton1.Size = new System.Drawing.Size(72, 34);
-            this.skinButton1.TabIndex = 69;
-            this.skinButton1.Text = "保存";
-            this.skinButton1.UseVisualStyleBackColor = true;
-            // 
             // skinTabPage2
             // 
             this.skinTabPage2.BackColor = System.Drawing.Color.White;
@@ -725,6 +688,35 @@
             this.skinTabPage3.TabItemImage = null;
             this.skinTabPage3.Text = "关于";
             // 
+            // skinLabel14
+            // 
+            this.skinLabel14.AutoSize = true;
+            this.skinLabel14.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel14.BorderColor = System.Drawing.Color.White;
+            this.skinLabel14.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel14.Location = new System.Drawing.Point(55, 38);
+            this.skinLabel14.Name = "skinLabel14";
+            this.skinLabel14.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.skinLabel14.Size = new System.Drawing.Size(102, 17);
+            this.skinLabel14.TabIndex = 2;
+            this.skinLabel14.Text = "小组/接口/插件：";
+            // 
+            // skinChatRichTextBox1
+            // 
+            this.skinChatRichTextBox1.BackColor = System.Drawing.Color.White;
+            this.skinChatRichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.skinChatRichTextBox1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinChatRichTextBox1.Location = new System.Drawing.Point(54, 71);
+            this.skinChatRichTextBox1.Name = "skinChatRichTextBox1";
+            this.skinChatRichTextBox1.ReadOnly = true;
+            this.skinChatRichTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.skinChatRichTextBox1.SelectControl = null;
+            this.skinChatRichTextBox1.SelectControlIndex = 0;
+            this.skinChatRichTextBox1.SelectControlPoint = new System.Drawing.Point(0, 0);
+            this.skinChatRichTextBox1.Size = new System.Drawing.Size(400, 205);
+            this.skinChatRichTextBox1.TabIndex = 0;
+            this.skinChatRichTextBox1.Text = resources.GetString("skinChatRichTextBox1.Text");
+            // 
             // btn_Close
             // 
             this.btn_Close.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -774,35 +766,6 @@
             this.btn_mainpage.TabIndex = 67;
             this.btn_mainpage.UseVisualStyleBackColor = false;
             // 
-            // skinChatRichTextBox1
-            // 
-            this.skinChatRichTextBox1.BackColor = System.Drawing.Color.White;
-            this.skinChatRichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.skinChatRichTextBox1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinChatRichTextBox1.Location = new System.Drawing.Point(54, 71);
-            this.skinChatRichTextBox1.Name = "skinChatRichTextBox1";
-            this.skinChatRichTextBox1.ReadOnly = true;
-            this.skinChatRichTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.skinChatRichTextBox1.SelectControl = null;
-            this.skinChatRichTextBox1.SelectControlIndex = 0;
-            this.skinChatRichTextBox1.SelectControlPoint = new System.Drawing.Point(0, 0);
-            this.skinChatRichTextBox1.Size = new System.Drawing.Size(400, 205);
-            this.skinChatRichTextBox1.TabIndex = 0;
-            this.skinChatRichTextBox1.Text = resources.GetString("skinChatRichTextBox1.Text");
-            // 
-            // skinLabel14
-            // 
-            this.skinLabel14.AutoSize = true;
-            this.skinLabel14.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel14.BorderColor = System.Drawing.Color.White;
-            this.skinLabel14.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel14.Location = new System.Drawing.Point(55, 38);
-            this.skinLabel14.Name = "skinLabel14";
-            this.skinLabel14.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.skinLabel14.Size = new System.Drawing.Size(102, 17);
-            this.skinLabel14.TabIndex = 2;
-            this.skinLabel14.Text = "小组/接口/插件：";
-            // 
             // control1
             // 
             this.control1.Location = new System.Drawing.Point(0, 0);
@@ -818,6 +781,25 @@
             this.control2.Size = new System.Drawing.Size(0, 0);
             this.control2.TabIndex = 0;
             this.control2.Text = "control2";
+            // 
+            // skinCheckBox4
+            // 
+            this.skinCheckBox4.AutoSize = true;
+            this.skinCheckBox4.BackColor = System.Drawing.Color.Transparent;
+            this.skinCheckBox4.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinCheckBox4.DownBack = null;
+            this.skinCheckBox4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinCheckBox4.Location = new System.Drawing.Point(284, 241);
+            this.skinCheckBox4.MouseBack = null;
+            this.skinCheckBox4.Name = "skinCheckBox4";
+            this.skinCheckBox4.NormlBack = null;
+            this.skinCheckBox4.SelectedDownBack = null;
+            this.skinCheckBox4.SelectedMouseBack = null;
+            this.skinCheckBox4.SelectedNormlBack = null;
+            this.skinCheckBox4.Size = new System.Drawing.Size(168, 24);
+            this.skinCheckBox4.TabIndex = 75;
+            this.skinCheckBox4.Text = "每次退出自动清除缓存";
+            this.skinCheckBox4.UseVisualStyleBackColor = false;
             // 
             // Form_Setting
             // 
@@ -843,7 +825,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.num_loop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trabar_light)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_usernodo)).EndInit();
-            this.skinTabPage4.ResumeLayout(false);
             this.skinTabPage2.ResumeLayout(false);
             this.skinTabPage2.PerformLayout();
             this.skinTabPage3.ResumeLayout(false);
@@ -891,12 +872,11 @@
         private CCWin.SkinControl.SkinLabel skinLabel13;
         private CCWin.SkinControl.SkinComboBox skinComboBox3;
         private CCWin.SkinControl.SkinComboBox skinComboBox4;
-        private CCWin.SkinControl.SkinTabPage skinTabPage4;
-        private CCWin.SkinControl.SkinButton skinButton1;
         private CCWin.SkinControl.SkinButton skinButton3;
         private CCWin.SkinControl.SkinLabel skinLabel14;
         private CCWin.SkinControl.SkinChatRichTextBox skinChatRichTextBox1;
         private System.Windows.Forms.Control control1;
         private System.Windows.Forms.Control control2;
+        private CCWin.SkinControl.SkinCheckBox skinCheckBox4;
     }
 }

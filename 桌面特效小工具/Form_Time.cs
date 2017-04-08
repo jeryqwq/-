@@ -315,7 +315,7 @@ namespace clock
         {
             numclock.Show();
             this.Hide();
-    CanPenetrate(); 
+  //  CanPenetrate(); 
 
         }
 
@@ -350,7 +350,6 @@ namespace clock
 
         private void 返回主界面ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
             this.Hide();
             systemvoid.ShowForm("Form_Main");
             systemvoid.ReturnFormSize("Form_Main");

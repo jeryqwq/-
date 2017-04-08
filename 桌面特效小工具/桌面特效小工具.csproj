@@ -120,6 +120,7 @@
     <Compile Include="HttpCookieHelper.cs" />
     <Compile Include="HttpHelper.cs" />
     <Compile Include="IEChang.cs" />
+    <Compile Include="Js.cs" />
     <Compile Include="Light.cs" />
     <Compile Include="MyApp.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -215,6 +216,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Web References\cn.com.webxml.www\WeatherWebService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

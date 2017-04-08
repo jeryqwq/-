@@ -9,7 +9,8 @@ namespace 桌面特效小工具
 {
     class FileReader
 
-    { public void RemoveFile(string OldPath,string NewPath) {
+    {
+        public void RemoveFile(string OldPath,string NewPath) {
             UserMessagebox usermessagebox = new UserMessagebox();
             DirectoryInfo TheFolder = new DirectoryInfo(OldPath);
         FileInfo[] Files = TheFolder.GetFiles();

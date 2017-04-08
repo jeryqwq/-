@@ -61,7 +61,7 @@ namespace 桌面特效小工具
         {
             try
             {
-                MyApp.Default.City = cb_city.Text;
+               if(cb_city.Text!= "请输入城市名：") MyApp.Default.City = cb_city.Text;
                 MyApp.Default.userNoDoThing = (int)num_usernodo.Value * 60;
                 if (tb_pwd.Text != "") MyApp.Default.userPwd = tb_pwd.Text;
                 MyApp.Default.DeskLoop = (int)num_loop.Value;

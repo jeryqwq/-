@@ -82,7 +82,9 @@ namespace 桌面特效小工具
 
         private void 返回主界面ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             systemvoid.ShowForm("Form_Main");
+            systemvoid.ReturnFormSize("Form_Main");
         }
 
         private void lb_weather2_MouseDown(object sender, MouseEventArgs e)

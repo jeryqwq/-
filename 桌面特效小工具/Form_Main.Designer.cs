@@ -50,17 +50,13 @@
             this.panel_tabcontrol = new CCWin.SkinControl.SkinPanel();
             this.tab_tool = new CCWin.SkinControl.SkinTabControl();
             this.page_main = new CCWin.SkinControl.SkinTabPage();
-            this.page_background = new CCWin.SkinControl.SkinTabPage();
-            this.skinButton3 = new CCWin.SkinControl.SkinButton();
-            this.tvList = new CCWin.SkinControl.SkinTreeView();
-            this.gifLoading = new CCWin.SkinControl.GifBox();
-            this.lvList = new CCWin.SkinControl.SkinListView();
-            this.menu_OnlineImg = new CCWin.SkinControl.SkinContextMenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.查看图片文件夹ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.图片缓存ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.图片另存为ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tb_serch = new CCWin.SkinControl.SkinTextBox();
+            this.page_js = new CCWin.SkinControl.SkinTabPage();
+            this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
+            this.skinPictureBox1 = new CCWin.SkinControl.SkinPictureBox();
+            this.skinRadioButton7 = new CCWin.SkinControl.SkinRadioButton();
+            this.skinRadioButton4 = new CCWin.SkinControl.SkinRadioButton();
+            this.skinRadioButton3 = new CCWin.SkinControl.SkinRadioButton();
+            this.skinRadioButton1 = new CCWin.SkinControl.SkinRadioButton();
             this.page_proctect = new CCWin.SkinControl.SkinTabPage();
             this.btn_loop = new CCWin.SkinControl.SkinButton();
             this.btn_begin = new CCWin.SkinControl.SkinButton();
@@ -72,34 +68,50 @@
             this.skinRadioButton2 = new CCWin.SkinControl.SkinRadioButton();
             this.panel_web = new System.Windows.Forms.Panel();
             this.web = new System.Windows.Forms.WebBrowser();
+            this.page_background = new CCWin.SkinControl.SkinTabPage();
+            this.skinButton3 = new CCWin.SkinControl.SkinButton();
+            this.tvList = new CCWin.SkinControl.SkinTreeView();
+            this.gifLoading = new CCWin.SkinControl.GifBox();
+            this.lvList = new CCWin.SkinControl.SkinListView();
+            this.menu_OnlineImg = new CCWin.SkinControl.SkinContextMenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.查看图片文件夹ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.图片缓存ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.图片另存为ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tb_serch = new CCWin.SkinControl.SkinTextBox();
             this.tab_file = new CCWin.SkinControl.SkinTabPage();
             this.skinButton6 = new CCWin.SkinControl.SkinButton();
             this.skinButton5 = new CCWin.SkinControl.SkinButton();
             this.skinButton4 = new CCWin.SkinControl.SkinButton();
             this.skinButton1 = new CCWin.SkinControl.SkinButton();
             this.panel_webFile = new System.Windows.Forms.Panel();
-            this.page_js = new CCWin.SkinControl.SkinTabPage();
-            this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
-            this.skinRadioButton7 = new CCWin.SkinControl.SkinRadioButton();
-            this.skinRadioButton4 = new CCWin.SkinControl.SkinRadioButton();
-            this.skinRadioButton3 = new CCWin.SkinControl.SkinRadioButton();
-            this.skinRadioButton1 = new CCWin.SkinControl.SkinRadioButton();
             this.page_games = new CCWin.SkinControl.SkinTabPage();
             this.ToolTip = new CCWin.SkinToolTip(this.components);
             this.btn_ChangClocl = new CCWin.SkinControl.SkinButton();
             this.timer_hide = new System.Windows.Forms.Timer(this.components);
             this.timer_userNoDo = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.menu_icon = new CCWin.SkinControl.SkinContextMenuStrip();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.关于ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.img_DeskSonw = new System.Windows.Forms.ImageList(this.components);
             this.pan_SysBtn.SuspendLayout();
             this.menu_setting.SuspendLayout();
             this.panel_tabcontrol.SuspendLayout();
             this.tab_tool.SuspendLayout();
-            this.page_background.SuspendLayout();
-            this.menu_OnlineImg.SuspendLayout();
+            this.page_js.SuspendLayout();
+            this.skinPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).BeginInit();
             this.page_proctect.SuspendLayout();
             this.panel_web.SuspendLayout();
+            this.page_background.SuspendLayout();
+            this.menu_OnlineImg.SuspendLayout();
             this.tab_file.SuspendLayout();
-            this.page_js.SuspendLayout();
+            this.menu_icon.SuspendLayout();
             this.SuspendLayout();
             // 
             // pan_SysBtn
@@ -373,7 +385,7 @@
             // 
             this.主页ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("主页ToolStripMenuItem.Image")));
             this.主页ToolStripMenuItem.Name = "主页ToolStripMenuItem";
-            this.主页ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.主页ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.主页ToolStripMenuItem.Text = "主页";
             this.主页ToolStripMenuItem.Click += new System.EventHandler(this.主页ToolStripMenuItem_Click);
             // 
@@ -381,7 +393,7 @@
             // 
             this.桌面时钟ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("桌面时钟ToolStripMenuItem.Image")));
             this.桌面时钟ToolStripMenuItem.Name = "桌面时钟ToolStripMenuItem";
-            this.桌面时钟ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.桌面时钟ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.桌面时钟ToolStripMenuItem.Text = "桌面时钟";
             this.桌面时钟ToolStripMenuItem.Click += new System.EventHandler(this.桌面时钟ToolStripMenuItem_Click);
             // 
@@ -390,7 +402,7 @@
             this.设置中心ToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.设置中心ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("设置中心ToolStripMenuItem.Image")));
             this.设置中心ToolStripMenuItem.Name = "设置中心ToolStripMenuItem";
-            this.设置中心ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.设置中心ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.设置中心ToolStripMenuItem.Text = "设置中心";
             this.设置中心ToolStripMenuItem.Click += new System.EventHandler(this.设置中心ToolStripMenuItem_Click);
             // 
@@ -398,7 +410,7 @@
             // 
             this.小组ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("小组ToolStripMenuItem.Image")));
             this.小组ToolStripMenuItem.Name = "小组ToolStripMenuItem";
-            this.小组ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.小组ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.小组ToolStripMenuItem.Text = "小组人员";
             this.小组ToolStripMenuItem.Click += new System.EventHandler(this.小组ToolStripMenuItem_Click);
             // 
@@ -406,7 +418,7 @@
             // 
             this.软件源码ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("软件源码ToolStripMenuItem.Image")));
             this.软件源码ToolStripMenuItem.Name = "软件源码ToolStripMenuItem";
-            this.软件源码ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.软件源码ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.软件源码ToolStripMenuItem.Text = "软件主页";
             this.软件源码ToolStripMenuItem.Click += new System.EventHandler(this.软件源码ToolStripMenuItem_Click);
             // 
@@ -414,14 +426,14 @@
             // 
             this.反馈建议ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("反馈建议ToolStripMenuItem.Image")));
             this.反馈建议ToolStripMenuItem.Name = "反馈建议ToolStripMenuItem";
-            this.反馈建议ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.反馈建议ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.反馈建议ToolStripMenuItem.Text = "反馈建议";
             // 
             // 关于ToolStripMenuItem
             // 
             this.关于ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("关于ToolStripMenuItem.Image")));
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.关于ToolStripMenuItem.Text = "关于";
             // 
             // panel_tabcontrol
@@ -442,17 +454,16 @@
             // tab_tool
             // 
             this.tab_tool.Alignment = System.Windows.Forms.TabAlignment.Bottom;
-            this.tab_tool.AnimationStart = true;
-            this.tab_tool.AnimatorType = CCWin.SkinControl.AnimationType.Transparent;
+            this.tab_tool.AnimatorType = CCWin.SkinControl.AnimationType.HorizSlide;
             this.tab_tool.ArrowBaseColor = System.Drawing.Color.Transparent;
             this.tab_tool.ArrowBorderColor = System.Drawing.Color.Transparent;
             this.tab_tool.ArrowColor = System.Drawing.Color.Transparent;
             this.tab_tool.CloseRect = new System.Drawing.Rectangle(2, 2, 12, 12);
             this.tab_tool.Controls.Add(this.page_main);
-            this.tab_tool.Controls.Add(this.page_background);
             this.tab_tool.Controls.Add(this.page_proctect);
-            this.tab_tool.Controls.Add(this.tab_file);
             this.tab_tool.Controls.Add(this.page_js);
+            this.tab_tool.Controls.Add(this.page_background);
+            this.tab_tool.Controls.Add(this.tab_file);
             this.tab_tool.Controls.Add(this.page_games);
             this.tab_tool.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tab_tool.HeadBack = null;
@@ -480,7 +491,7 @@
             this.tab_tool.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Top;
             this.tab_tool.PageNorml = null;
             this.tab_tool.PageNormlTxtColor = System.Drawing.Color.White;
-            this.tab_tool.SelectedIndex = 0;
+            this.tab_tool.SelectedIndex = 2;
             this.tab_tool.Size = new System.Drawing.Size(719, 490);
             this.tab_tool.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tab_tool.TabIndex = 6;
@@ -499,180 +510,146 @@
             this.page_main.TabItemImage = ((System.Drawing.Image)(resources.GetObject("page_main.TabItemImage")));
             this.page_main.Text = "主页";
             // 
-            // page_background
+            // page_js
             // 
-            this.page_background.BackColor = System.Drawing.Color.Transparent;
-            this.page_background.Controls.Add(this.skinButton3);
-            this.page_background.Controls.Add(this.tvList);
-            this.page_background.Controls.Add(this.gifLoading);
-            this.page_background.Controls.Add(this.lvList);
-            this.page_background.Controls.Add(this.tb_serch);
-            this.page_background.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.page_background.Location = new System.Drawing.Point(0, 0);
-            this.page_background.Name = "page_background";
-            this.page_background.Size = new System.Drawing.Size(719, 439);
-            this.page_background.TabIndex = 0;
-            this.page_background.TabItemImage = ((System.Drawing.Image)(resources.GetObject("page_background.TabItemImage")));
-            this.page_background.Text = "在线壁纸";
-            this.page_background.ToolTipText = "桌面屏保";
+            this.page_js.BackColor = System.Drawing.Color.Transparent;
+            this.page_js.Controls.Add(this.skinPanel1);
+            this.page_js.Controls.Add(this.skinRadioButton7);
+            this.page_js.Controls.Add(this.skinRadioButton4);
+            this.page_js.Controls.Add(this.skinRadioButton3);
+            this.page_js.Controls.Add(this.skinRadioButton1);
+            this.page_js.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.page_js.Location = new System.Drawing.Point(0, 0);
+            this.page_js.Name = "page_js";
+            this.page_js.Size = new System.Drawing.Size(719, 439);
+            this.page_js.TabIndex = 2;
+            this.page_js.TabItemImage = ((System.Drawing.Image)(resources.GetObject("page_js.TabItemImage")));
+            this.page_js.Text = "桌面特效";
+            this.page_js.ToolTipText = "桌面特效";
             // 
-            // skinButton3
+            // skinPanel1
             // 
-            this.skinButton3.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("skinButton3.BackgroundImage")));
-            this.skinButton3.BaseColor = System.Drawing.Color.Transparent;
-            this.skinButton3.BorderColor = System.Drawing.Color.Transparent;
-            this.skinButton3.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton3.DownBack = ((System.Drawing.Image)(resources.GetObject("skinButton3.DownBack")));
-            this.skinButton3.DownBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton3.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.skinButton3.FadeGlow = false;
-            this.skinButton3.Font = new System.Drawing.Font("微软雅黑 Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinButton3.ForeColor = System.Drawing.Color.Transparent;
-            this.skinButton3.GlowColor = System.Drawing.Color.Transparent;
-            this.skinButton3.InnerBorderColor = System.Drawing.Color.Transparent;
-            this.skinButton3.Location = new System.Drawing.Point(459, 16);
-            this.skinButton3.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton3.MouseBack")));
-            this.skinButton3.MouseBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton3.Name = "skinButton3";
-            this.skinButton3.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton3.NormlBack")));
-            this.skinButton3.Size = new System.Drawing.Size(109, 34);
-            this.skinButton3.TabIndex = 34;
-            this.skinButton3.Text = "百度一下";
-            this.skinButton3.UseVisualStyleBackColor = true;
-            this.skinButton3.Click += new System.EventHandler(this.skinButton3_Click);
+            this.skinPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.skinPanel1.Controls.Add(this.skinPictureBox1);
+            this.skinPanel1.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinPanel1.DownBack = null;
+            this.skinPanel1.Location = new System.Drawing.Point(184, 170);
+            this.skinPanel1.MouseBack = null;
+            this.skinPanel1.Name = "skinPanel1";
+            this.skinPanel1.NormlBack = null;
+            this.skinPanel1.Size = new System.Drawing.Size(371, 220);
+            this.skinPanel1.TabIndex = 45;
             // 
-            // tvList
+            // skinPictureBox1
             // 
-            this.tvList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.tvList.Location = new System.Drawing.Point(8, 75);
-            this.tvList.Name = "tvList";
-            this.tvList.Size = new System.Drawing.Size(166, 362);
-            this.tvList.TabIndex = 4;
-            this.tvList.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvList_AfterSelect);
+            this.skinPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.skinPictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinPictureBox1.ImageLocation = "";
+            this.skinPictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.skinPictureBox1.Name = "skinPictureBox1";
+            this.skinPictureBox1.Size = new System.Drawing.Size(371, 220);
+            this.skinPictureBox1.TabIndex = 0;
+            this.skinPictureBox1.TabStop = false;
             // 
-            // gifLoading
+            // skinRadioButton7
             // 
-            this.gifLoading.BackColor = System.Drawing.Color.White;
-            this.gifLoading.BorderColor = System.Drawing.Color.White;
-            this.gifLoading.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.gifLoading.Image = ((System.Drawing.Image)(resources.GetObject("gifLoading.Image")));
-            this.gifLoading.Location = new System.Drawing.Point(384, 212);
-            this.gifLoading.Name = "gifLoading";
-            this.gifLoading.Size = new System.Drawing.Size(132, 134);
-            this.gifLoading.TabIndex = 3;
-            this.gifLoading.Text = "加载中...";
-            this.gifLoading.Visible = false;
+            this.skinRadioButton7.AutoSize = true;
+            this.skinRadioButton7.BackColor = System.Drawing.Color.Transparent;
+            this.skinRadioButton7.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinRadioButton7.DefaultRadioButtonWidth = 11;
+            this.skinRadioButton7.DownBack = null;
+            this.skinRadioButton7.Font = new System.Drawing.Font("微软雅黑 Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinRadioButton7.ForeColor = System.Drawing.Color.Gainsboro;
+            this.skinRadioButton7.IsEnabledDraw = false;
+            this.skinRadioButton7.LightEffect = false;
+            this.skinRadioButton7.LightEffectWidth = 0;
+            this.skinRadioButton7.Location = new System.Drawing.Point(455, 99);
+            this.skinRadioButton7.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinRadioButton7.MouseBack")));
+            this.skinRadioButton7.Name = "skinRadioButton7";
+            this.skinRadioButton7.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinRadioButton7.NormlBack")));
+            this.skinRadioButton7.SelectedDownBack = null;
+            this.skinRadioButton7.SelectedMouseBack = ((System.Drawing.Image)(resources.GetObject("skinRadioButton7.SelectedMouseBack")));
+            this.skinRadioButton7.SelectedNormlBack = ((System.Drawing.Image)(resources.GetObject("skinRadioButton7.SelectedNormlBack")));
+            this.skinRadioButton7.Size = new System.Drawing.Size(86, 21);
+            this.skinRadioButton7.TabIndex = 44;
+            this.skinRadioButton7.Text = "桌面蒲公英";
+            this.skinRadioButton7.UseVisualStyleBackColor = false;
+            this.skinRadioButton7.CheckedChanged += new System.EventHandler(this.skinRadioButton7_CheckedChanged);
             // 
-            // lvList
+            // skinRadioButton4
             // 
-            this.lvList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lvList.ContextMenuStrip = this.menu_OnlineImg;
-            this.lvList.Location = new System.Drawing.Point(171, 75);
-            this.lvList.Name = "lvList";
-            this.lvList.OwnerDraw = true;
-            this.lvList.Size = new System.Drawing.Size(539, 362);
-            this.lvList.TabIndex = 2;
-            this.lvList.UseCompatibleStateImageBehavior = false;
+            this.skinRadioButton4.AutoSize = true;
+            this.skinRadioButton4.BackColor = System.Drawing.Color.Transparent;
+            this.skinRadioButton4.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinRadioButton4.DefaultRadioButtonWidth = 11;
+            this.skinRadioButton4.DownBack = null;
+            this.skinRadioButton4.Font = new System.Drawing.Font("微软雅黑 Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinRadioButton4.ForeColor = System.Drawing.Color.Gainsboro;
+            this.skinRadioButton4.IsEnabledDraw = false;
+            this.skinRadioButton4.LightEffect = false;
+            this.skinRadioButton4.LightEffectWidth = 0;
+            this.skinRadioButton4.Location = new System.Drawing.Point(170, 99);
+            this.skinRadioButton4.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinRadioButton4.MouseBack")));
+            this.skinRadioButton4.Name = "skinRadioButton4";
+            this.skinRadioButton4.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinRadioButton4.NormlBack")));
+            this.skinRadioButton4.SelectedDownBack = null;
+            this.skinRadioButton4.SelectedMouseBack = ((System.Drawing.Image)(resources.GetObject("skinRadioButton4.SelectedMouseBack")));
+            this.skinRadioButton4.SelectedNormlBack = ((System.Drawing.Image)(resources.GetObject("skinRadioButton4.SelectedNormlBack")));
+            this.skinRadioButton4.Size = new System.Drawing.Size(74, 21);
+            this.skinRadioButton4.TabIndex = 43;
+            this.skinRadioButton4.Text = "桌面泡泡";
+            this.skinRadioButton4.UseVisualStyleBackColor = false;
+            this.skinRadioButton4.CheckedChanged += new System.EventHandler(this.skinRadioButton4_CheckedChanged);
             // 
-            // menu_OnlineImg
+            // skinRadioButton3
             // 
-            this.menu_OnlineImg.Arrow = System.Drawing.SystemColors.Highlight;
-            this.menu_OnlineImg.AutoSize = false;
-            this.menu_OnlineImg.Back = System.Drawing.SystemColors.ButtonHighlight;
-            this.menu_OnlineImg.BackRadius = 4;
-            this.menu_OnlineImg.Base = System.Drawing.SystemColors.Highlight;
-            this.menu_OnlineImg.DropDownImageSeparator = System.Drawing.SystemColors.Highlight;
-            this.menu_OnlineImg.Fore = System.Drawing.Color.Black;
-            this.menu_OnlineImg.HoverFore = System.Drawing.Color.White;
-            this.menu_OnlineImg.ItemAnamorphosis = false;
-            this.menu_OnlineImg.ItemBorder = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
-            this.menu_OnlineImg.ItemBorderShow = true;
-            this.menu_OnlineImg.ItemHover = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
-            this.menu_OnlineImg.ItemPressed = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
-            this.menu_OnlineImg.ItemRadius = 10;
-            this.menu_OnlineImg.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.menu_OnlineImg.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.查看图片文件夹ToolStripMenuItem,
-            this.图片缓存ToolStripMenuItem,
-            this.图片另存为ToolStripMenuItem});
-            this.menu_OnlineImg.ItemSplitter = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
-            this.menu_OnlineImg.Name = "menu_setting";
-            this.menu_OnlineImg.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.menu_OnlineImg.Size = new System.Drawing.Size(115, 100);
-            this.menu_OnlineImg.SkinAllColor = true;
-            this.menu_OnlineImg.TitleAnamorphosis = false;
-            this.menu_OnlineImg.TitleColor = System.Drawing.Color.White;
-            this.menu_OnlineImg.TitleRadius = 10;
-            this.menu_OnlineImg.TitleRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinRadioButton3.AutoSize = true;
+            this.skinRadioButton3.BackColor = System.Drawing.Color.Transparent;
+            this.skinRadioButton3.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinRadioButton3.DefaultRadioButtonWidth = 11;
+            this.skinRadioButton3.DownBack = null;
+            this.skinRadioButton3.Font = new System.Drawing.Font("微软雅黑 Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinRadioButton3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.skinRadioButton3.IsEnabledDraw = false;
+            this.skinRadioButton3.LightEffect = false;
+            this.skinRadioButton3.LightEffectWidth = 0;
+            this.skinRadioButton3.Location = new System.Drawing.Point(455, 53);
+            this.skinRadioButton3.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinRadioButton3.MouseBack")));
+            this.skinRadioButton3.Name = "skinRadioButton3";
+            this.skinRadioButton3.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinRadioButton3.NormlBack")));
+            this.skinRadioButton3.SelectedDownBack = null;
+            this.skinRadioButton3.SelectedMouseBack = ((System.Drawing.Image)(resources.GetObject("skinRadioButton3.SelectedMouseBack")));
+            this.skinRadioButton3.SelectedNormlBack = ((System.Drawing.Image)(resources.GetObject("skinRadioButton3.SelectedNormlBack")));
+            this.skinRadioButton3.Size = new System.Drawing.Size(74, 21);
+            this.skinRadioButton3.TabIndex = 42;
+            this.skinRadioButton3.Text = "桌面雪花";
+            this.skinRadioButton3.UseVisualStyleBackColor = false;
+            this.skinRadioButton3.CheckedChanged += new System.EventHandler(this.skinRadioButton3_CheckedChanged);
             // 
-            // toolStripMenuItem1
+            // skinRadioButton1
             // 
-            this.toolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem1.Image")));
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(148, 22);
-            this.toolStripMenuItem1.Text = "设为当前壁纸";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // 
-            // 查看图片文件夹ToolStripMenuItem
-            // 
-            this.查看图片文件夹ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("查看图片文件夹ToolStripMenuItem.Image")));
-            this.查看图片文件夹ToolStripMenuItem.Name = "查看图片文件夹ToolStripMenuItem";
-            this.查看图片文件夹ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.查看图片文件夹ToolStripMenuItem.Text = "壁纸文件夹";
-            this.查看图片文件夹ToolStripMenuItem.Click += new System.EventHandler(this.查看图片文件夹ToolStripMenuItem_Click);
-            // 
-            // 图片缓存ToolStripMenuItem
-            // 
-            this.图片缓存ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("图片缓存ToolStripMenuItem.Image")));
-            this.图片缓存ToolStripMenuItem.Name = "图片缓存ToolStripMenuItem";
-            this.图片缓存ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.图片缓存ToolStripMenuItem.Text = "图片缓存";
-            // 
-            // 图片另存为ToolStripMenuItem
-            // 
-            this.图片另存为ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("图片另存为ToolStripMenuItem.Image")));
-            this.图片另存为ToolStripMenuItem.Name = "图片另存为ToolStripMenuItem";
-            this.图片另存为ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.图片另存为ToolStripMenuItem.Text = "图片另存为";
-            // 
-            // tb_serch
-            // 
-            this.tb_serch.BackColor = System.Drawing.Color.Transparent;
-            this.tb_serch.DownBack = null;
-            this.tb_serch.Icon = null;
-            this.tb_serch.IconIsButton = false;
-            this.tb_serch.IconMouseState = CCWin.SkinClass.ControlState.Normal;
-            this.tb_serch.IsPasswordChat = '\0';
-            this.tb_serch.IsSystemPasswordChar = false;
-            this.tb_serch.Lines = new string[0];
-            this.tb_serch.Location = new System.Drawing.Point(124, 25);
-            this.tb_serch.Margin = new System.Windows.Forms.Padding(0);
-            this.tb_serch.MaxLength = 32767;
-            this.tb_serch.MinimumSize = new System.Drawing.Size(28, 28);
-            this.tb_serch.MouseBack = null;
-            this.tb_serch.MouseState = CCWin.SkinClass.ControlState.Normal;
-            this.tb_serch.Multiline = false;
-            this.tb_serch.Name = "tb_serch";
-            this.tb_serch.NormlBack = null;
-            this.tb_serch.Padding = new System.Windows.Forms.Padding(5);
-            this.tb_serch.ReadOnly = false;
-            this.tb_serch.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tb_serch.Size = new System.Drawing.Size(185, 28);
-            // 
-            // 
-            // 
-            this.tb_serch.SkinTxt.Location = new System.Drawing.Point(0, 0);
-            this.tb_serch.SkinTxt.Name = "BaseText";
-            this.tb_serch.SkinTxt.TabIndex = 0;
-            this.tb_serch.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.tb_serch.SkinTxt.WaterText = "自定义关键字搜索";
-            this.tb_serch.TabIndex = 5;
-            this.tb_serch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.tb_serch.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.tb_serch.WaterText = "自定义关键字搜索";
-            this.tb_serch.WordWrap = true;
+            this.skinRadioButton1.AutoSize = true;
+            this.skinRadioButton1.BackColor = System.Drawing.Color.Transparent;
+            this.skinRadioButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinRadioButton1.DefaultRadioButtonWidth = 11;
+            this.skinRadioButton1.DownBack = null;
+            this.skinRadioButton1.Font = new System.Drawing.Font("微软雅黑 Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinRadioButton1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.skinRadioButton1.IsEnabledDraw = false;
+            this.skinRadioButton1.LightEffect = false;
+            this.skinRadioButton1.LightEffectWidth = 0;
+            this.skinRadioButton1.Location = new System.Drawing.Point(170, 53);
+            this.skinRadioButton1.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinRadioButton1.MouseBack")));
+            this.skinRadioButton1.Name = "skinRadioButton1";
+            this.skinRadioButton1.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinRadioButton1.NormlBack")));
+            this.skinRadioButton1.SelectedDownBack = null;
+            this.skinRadioButton1.SelectedMouseBack = ((System.Drawing.Image)(resources.GetObject("skinRadioButton1.SelectedMouseBack")));
+            this.skinRadioButton1.SelectedNormlBack = ((System.Drawing.Image)(resources.GetObject("skinRadioButton1.SelectedNormlBack")));
+            this.skinRadioButton1.Size = new System.Drawing.Size(74, 21);
+            this.skinRadioButton1.TabIndex = 41;
+            this.skinRadioButton1.Text = "桌面爱心";
+            this.skinRadioButton1.UseVisualStyleBackColor = false;
+            this.skinRadioButton1.CheckedChanged += new System.EventHandler(this.skinRadioButton1_CheckedChanged);
             // 
             // page_proctect
             // 
@@ -920,6 +897,181 @@
             this.web.WebBrowserShortcutsEnabled = false;
             this.web.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.web_PreviewKeyDown);
             // 
+            // page_background
+            // 
+            this.page_background.BackColor = System.Drawing.Color.Transparent;
+            this.page_background.Controls.Add(this.skinButton3);
+            this.page_background.Controls.Add(this.tvList);
+            this.page_background.Controls.Add(this.gifLoading);
+            this.page_background.Controls.Add(this.lvList);
+            this.page_background.Controls.Add(this.tb_serch);
+            this.page_background.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.page_background.Location = new System.Drawing.Point(0, 0);
+            this.page_background.Name = "page_background";
+            this.page_background.Size = new System.Drawing.Size(719, 439);
+            this.page_background.TabIndex = 0;
+            this.page_background.TabItemImage = ((System.Drawing.Image)(resources.GetObject("page_background.TabItemImage")));
+            this.page_background.Text = "在线壁纸";
+            this.page_background.ToolTipText = "桌面屏保";
+            // 
+            // skinButton3
+            // 
+            this.skinButton3.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("skinButton3.BackgroundImage")));
+            this.skinButton3.BaseColor = System.Drawing.Color.Transparent;
+            this.skinButton3.BorderColor = System.Drawing.Color.Transparent;
+            this.skinButton3.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton3.DownBack = ((System.Drawing.Image)(resources.GetObject("skinButton3.DownBack")));
+            this.skinButton3.DownBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton3.DrawType = CCWin.SkinControl.DrawStyle.Img;
+            this.skinButton3.FadeGlow = false;
+            this.skinButton3.Font = new System.Drawing.Font("微软雅黑 Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinButton3.ForeColor = System.Drawing.Color.Transparent;
+            this.skinButton3.GlowColor = System.Drawing.Color.Transparent;
+            this.skinButton3.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.skinButton3.Location = new System.Drawing.Point(459, 16);
+            this.skinButton3.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton3.MouseBack")));
+            this.skinButton3.MouseBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton3.Name = "skinButton3";
+            this.skinButton3.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton3.NormlBack")));
+            this.skinButton3.Size = new System.Drawing.Size(109, 34);
+            this.skinButton3.TabIndex = 34;
+            this.skinButton3.Text = "百度一下";
+            this.skinButton3.UseVisualStyleBackColor = true;
+            this.skinButton3.Click += new System.EventHandler(this.skinButton3_Click);
+            // 
+            // tvList
+            // 
+            this.tvList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tvList.Location = new System.Drawing.Point(8, 75);
+            this.tvList.Name = "tvList";
+            this.tvList.Size = new System.Drawing.Size(166, 362);
+            this.tvList.TabIndex = 4;
+            this.tvList.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvList_AfterSelect);
+            // 
+            // gifLoading
+            // 
+            this.gifLoading.BackColor = System.Drawing.Color.White;
+            this.gifLoading.BorderColor = System.Drawing.Color.White;
+            this.gifLoading.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.gifLoading.Image = ((System.Drawing.Image)(resources.GetObject("gifLoading.Image")));
+            this.gifLoading.Location = new System.Drawing.Point(384, 212);
+            this.gifLoading.Name = "gifLoading";
+            this.gifLoading.Size = new System.Drawing.Size(132, 134);
+            this.gifLoading.TabIndex = 3;
+            this.gifLoading.Text = "加载中...";
+            this.gifLoading.Visible = false;
+            // 
+            // lvList
+            // 
+            this.lvList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lvList.ContextMenuStrip = this.menu_OnlineImg;
+            this.lvList.Location = new System.Drawing.Point(171, 75);
+            this.lvList.Name = "lvList";
+            this.lvList.OwnerDraw = true;
+            this.lvList.Size = new System.Drawing.Size(539, 362);
+            this.lvList.TabIndex = 2;
+            this.lvList.UseCompatibleStateImageBehavior = false;
+            // 
+            // menu_OnlineImg
+            // 
+            this.menu_OnlineImg.Arrow = System.Drawing.SystemColors.Highlight;
+            this.menu_OnlineImg.AutoSize = false;
+            this.menu_OnlineImg.Back = System.Drawing.SystemColors.ButtonHighlight;
+            this.menu_OnlineImg.BackRadius = 4;
+            this.menu_OnlineImg.Base = System.Drawing.SystemColors.Highlight;
+            this.menu_OnlineImg.DropDownImageSeparator = System.Drawing.SystemColors.Highlight;
+            this.menu_OnlineImg.Fore = System.Drawing.Color.Black;
+            this.menu_OnlineImg.HoverFore = System.Drawing.Color.White;
+            this.menu_OnlineImg.ItemAnamorphosis = false;
+            this.menu_OnlineImg.ItemBorder = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.menu_OnlineImg.ItemBorderShow = true;
+            this.menu_OnlineImg.ItemHover = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.menu_OnlineImg.ItemPressed = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.menu_OnlineImg.ItemRadius = 10;
+            this.menu_OnlineImg.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.menu_OnlineImg.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.查看图片文件夹ToolStripMenuItem,
+            this.图片缓存ToolStripMenuItem,
+            this.图片另存为ToolStripMenuItem});
+            this.menu_OnlineImg.ItemSplitter = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.menu_OnlineImg.Name = "menu_setting";
+            this.menu_OnlineImg.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.menu_OnlineImg.Size = new System.Drawing.Size(115, 100);
+            this.menu_OnlineImg.SkinAllColor = true;
+            this.menu_OnlineImg.TitleAnamorphosis = false;
+            this.menu_OnlineImg.TitleColor = System.Drawing.Color.White;
+            this.menu_OnlineImg.TitleRadius = 10;
+            this.menu_OnlineImg.TitleRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem1.Image")));
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(148, 22);
+            this.toolStripMenuItem1.Text = "设为当前壁纸";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // 查看图片文件夹ToolStripMenuItem
+            // 
+            this.查看图片文件夹ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("查看图片文件夹ToolStripMenuItem.Image")));
+            this.查看图片文件夹ToolStripMenuItem.Name = "查看图片文件夹ToolStripMenuItem";
+            this.查看图片文件夹ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.查看图片文件夹ToolStripMenuItem.Text = "壁纸文件夹";
+            this.查看图片文件夹ToolStripMenuItem.Click += new System.EventHandler(this.查看图片文件夹ToolStripMenuItem_Click);
+            // 
+            // 图片缓存ToolStripMenuItem
+            // 
+            this.图片缓存ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("图片缓存ToolStripMenuItem.Image")));
+            this.图片缓存ToolStripMenuItem.Name = "图片缓存ToolStripMenuItem";
+            this.图片缓存ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.图片缓存ToolStripMenuItem.Text = "图片缓存";
+            // 
+            // 图片另存为ToolStripMenuItem
+            // 
+            this.图片另存为ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("图片另存为ToolStripMenuItem.Image")));
+            this.图片另存为ToolStripMenuItem.Name = "图片另存为ToolStripMenuItem";
+            this.图片另存为ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.图片另存为ToolStripMenuItem.Text = "图片另存为";
+            // 
+            // tb_serch
+            // 
+            this.tb_serch.BackColor = System.Drawing.Color.Transparent;
+            this.tb_serch.DownBack = null;
+            this.tb_serch.Icon = null;
+            this.tb_serch.IconIsButton = false;
+            this.tb_serch.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.tb_serch.IsPasswordChat = '\0';
+            this.tb_serch.IsSystemPasswordChar = false;
+            this.tb_serch.Lines = new string[0];
+            this.tb_serch.Location = new System.Drawing.Point(124, 25);
+            this.tb_serch.Margin = new System.Windows.Forms.Padding(0);
+            this.tb_serch.MaxLength = 32767;
+            this.tb_serch.MinimumSize = new System.Drawing.Size(28, 28);
+            this.tb_serch.MouseBack = null;
+            this.tb_serch.MouseState = CCWin.SkinClass.ControlState.Normal;
+            this.tb_serch.Multiline = false;
+            this.tb_serch.Name = "tb_serch";
+            this.tb_serch.NormlBack = null;
+            this.tb_serch.Padding = new System.Windows.Forms.Padding(5);
+            this.tb_serch.ReadOnly = false;
+            this.tb_serch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tb_serch.Size = new System.Drawing.Size(185, 28);
+            // 
+            // 
+            // 
+            this.tb_serch.SkinTxt.Location = new System.Drawing.Point(0, 0);
+            this.tb_serch.SkinTxt.Name = "BaseText";
+            this.tb_serch.SkinTxt.TabIndex = 0;
+            this.tb_serch.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.tb_serch.SkinTxt.WaterText = "自定义关键字搜索";
+            this.tb_serch.TabIndex = 5;
+            this.tb_serch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tb_serch.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.tb_serch.WaterText = "自定义关键字搜索";
+            this.tb_serch.WordWrap = true;
+            // 
             // tab_file
             // 
             this.tab_file.BackColor = System.Drawing.Color.Transparent;
@@ -1050,135 +1202,6 @@
             this.panel_webFile.Size = new System.Drawing.Size(715, 364);
             this.panel_webFile.TabIndex = 0;
             // 
-            // page_js
-            // 
-            this.page_js.BackColor = System.Drawing.Color.Transparent;
-            this.page_js.Controls.Add(this.skinPanel1);
-            this.page_js.Controls.Add(this.skinRadioButton7);
-            this.page_js.Controls.Add(this.skinRadioButton4);
-            this.page_js.Controls.Add(this.skinRadioButton3);
-            this.page_js.Controls.Add(this.skinRadioButton1);
-            this.page_js.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.page_js.Location = new System.Drawing.Point(0, 0);
-            this.page_js.Name = "page_js";
-            this.page_js.Size = new System.Drawing.Size(719, 439);
-            this.page_js.TabIndex = 2;
-            this.page_js.TabItemImage = ((System.Drawing.Image)(resources.GetObject("page_js.TabItemImage")));
-            this.page_js.Text = "桌面特效";
-            this.page_js.ToolTipText = "桌面特效";
-            // 
-            // skinPanel1
-            // 
-            this.skinPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.skinPanel1.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinPanel1.DownBack = null;
-            this.skinPanel1.Location = new System.Drawing.Point(184, 170);
-            this.skinPanel1.MouseBack = null;
-            this.skinPanel1.Name = "skinPanel1";
-            this.skinPanel1.NormlBack = null;
-            this.skinPanel1.Size = new System.Drawing.Size(371, 220);
-            this.skinPanel1.TabIndex = 45;
-            // 
-            // skinRadioButton7
-            // 
-            this.skinRadioButton7.AutoSize = true;
-            this.skinRadioButton7.BackColor = System.Drawing.Color.Transparent;
-            this.skinRadioButton7.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinRadioButton7.DefaultRadioButtonWidth = 11;
-            this.skinRadioButton7.DownBack = null;
-            this.skinRadioButton7.Font = new System.Drawing.Font("微软雅黑 Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinRadioButton7.ForeColor = System.Drawing.Color.Gainsboro;
-            this.skinRadioButton7.IsEnabledDraw = false;
-            this.skinRadioButton7.LightEffect = false;
-            this.skinRadioButton7.LightEffectWidth = 0;
-            this.skinRadioButton7.Location = new System.Drawing.Point(455, 99);
-            this.skinRadioButton7.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinRadioButton7.MouseBack")));
-            this.skinRadioButton7.Name = "skinRadioButton7";
-            this.skinRadioButton7.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinRadioButton7.NormlBack")));
-            this.skinRadioButton7.SelectedDownBack = null;
-            this.skinRadioButton7.SelectedMouseBack = ((System.Drawing.Image)(resources.GetObject("skinRadioButton7.SelectedMouseBack")));
-            this.skinRadioButton7.SelectedNormlBack = ((System.Drawing.Image)(resources.GetObject("skinRadioButton7.SelectedNormlBack")));
-            this.skinRadioButton7.Size = new System.Drawing.Size(86, 21);
-            this.skinRadioButton7.TabIndex = 44;
-            this.skinRadioButton7.Text = "桌面蒲公英";
-            this.skinRadioButton7.UseVisualStyleBackColor = false;
-            this.skinRadioButton7.CheckedChanged += new System.EventHandler(this.skinRadioButton7_CheckedChanged);
-            // 
-            // skinRadioButton4
-            // 
-            this.skinRadioButton4.AutoSize = true;
-            this.skinRadioButton4.BackColor = System.Drawing.Color.Transparent;
-            this.skinRadioButton4.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinRadioButton4.DefaultRadioButtonWidth = 11;
-            this.skinRadioButton4.DownBack = null;
-            this.skinRadioButton4.Font = new System.Drawing.Font("微软雅黑 Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinRadioButton4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.skinRadioButton4.IsEnabledDraw = false;
-            this.skinRadioButton4.LightEffect = false;
-            this.skinRadioButton4.LightEffectWidth = 0;
-            this.skinRadioButton4.Location = new System.Drawing.Point(170, 99);
-            this.skinRadioButton4.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinRadioButton4.MouseBack")));
-            this.skinRadioButton4.Name = "skinRadioButton4";
-            this.skinRadioButton4.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinRadioButton4.NormlBack")));
-            this.skinRadioButton4.SelectedDownBack = null;
-            this.skinRadioButton4.SelectedMouseBack = ((System.Drawing.Image)(resources.GetObject("skinRadioButton4.SelectedMouseBack")));
-            this.skinRadioButton4.SelectedNormlBack = ((System.Drawing.Image)(resources.GetObject("skinRadioButton4.SelectedNormlBack")));
-            this.skinRadioButton4.Size = new System.Drawing.Size(74, 21);
-            this.skinRadioButton4.TabIndex = 43;
-            this.skinRadioButton4.Text = "桌面泡泡";
-            this.skinRadioButton4.UseVisualStyleBackColor = false;
-            this.skinRadioButton4.CheckedChanged += new System.EventHandler(this.skinRadioButton4_CheckedChanged);
-            // 
-            // skinRadioButton3
-            // 
-            this.skinRadioButton3.AutoSize = true;
-            this.skinRadioButton3.BackColor = System.Drawing.Color.Transparent;
-            this.skinRadioButton3.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinRadioButton3.DefaultRadioButtonWidth = 11;
-            this.skinRadioButton3.DownBack = null;
-            this.skinRadioButton3.Font = new System.Drawing.Font("微软雅黑 Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinRadioButton3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.skinRadioButton3.IsEnabledDraw = false;
-            this.skinRadioButton3.LightEffect = false;
-            this.skinRadioButton3.LightEffectWidth = 0;
-            this.skinRadioButton3.Location = new System.Drawing.Point(455, 53);
-            this.skinRadioButton3.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinRadioButton3.MouseBack")));
-            this.skinRadioButton3.Name = "skinRadioButton3";
-            this.skinRadioButton3.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinRadioButton3.NormlBack")));
-            this.skinRadioButton3.SelectedDownBack = null;
-            this.skinRadioButton3.SelectedMouseBack = ((System.Drawing.Image)(resources.GetObject("skinRadioButton3.SelectedMouseBack")));
-            this.skinRadioButton3.SelectedNormlBack = ((System.Drawing.Image)(resources.GetObject("skinRadioButton3.SelectedNormlBack")));
-            this.skinRadioButton3.Size = new System.Drawing.Size(74, 21);
-            this.skinRadioButton3.TabIndex = 42;
-            this.skinRadioButton3.Text = "桌面雪花";
-            this.skinRadioButton3.UseVisualStyleBackColor = false;
-            this.skinRadioButton3.CheckedChanged += new System.EventHandler(this.skinRadioButton3_CheckedChanged);
-            // 
-            // skinRadioButton1
-            // 
-            this.skinRadioButton1.AutoSize = true;
-            this.skinRadioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.skinRadioButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinRadioButton1.DefaultRadioButtonWidth = 11;
-            this.skinRadioButton1.DownBack = null;
-            this.skinRadioButton1.Font = new System.Drawing.Font("微软雅黑 Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinRadioButton1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.skinRadioButton1.IsEnabledDraw = false;
-            this.skinRadioButton1.LightEffect = false;
-            this.skinRadioButton1.LightEffectWidth = 0;
-            this.skinRadioButton1.Location = new System.Drawing.Point(170, 53);
-            this.skinRadioButton1.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinRadioButton1.MouseBack")));
-            this.skinRadioButton1.Name = "skinRadioButton1";
-            this.skinRadioButton1.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinRadioButton1.NormlBack")));
-            this.skinRadioButton1.SelectedDownBack = null;
-            this.skinRadioButton1.SelectedMouseBack = ((System.Drawing.Image)(resources.GetObject("skinRadioButton1.SelectedMouseBack")));
-            this.skinRadioButton1.SelectedNormlBack = ((System.Drawing.Image)(resources.GetObject("skinRadioButton1.SelectedNormlBack")));
-            this.skinRadioButton1.Size = new System.Drawing.Size(74, 21);
-            this.skinRadioButton1.TabIndex = 41;
-            this.skinRadioButton1.Text = "桌面爱心";
-            this.skinRadioButton1.UseVisualStyleBackColor = false;
-            this.skinRadioButton1.CheckedChanged += new System.EventHandler(this.skinRadioButton1_CheckedChanged);
-            // 
             // page_games
             // 
             this.page_games.BackColor = System.Drawing.Color.Transparent;
@@ -1241,10 +1264,92 @@
             // 
             // notifyIcon1
             // 
+            this.notifyIcon1.ContextMenuStrip = this.menu_icon;
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "桌面管理工具";
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
+            // 
+            // menu_icon
+            // 
+            this.menu_icon.Arrow = System.Drawing.SystemColors.Highlight;
+            this.menu_icon.AutoSize = false;
+            this.menu_icon.Back = System.Drawing.SystemColors.ButtonHighlight;
+            this.menu_icon.BackRadius = 4;
+            this.menu_icon.Base = System.Drawing.SystemColors.Highlight;
+            this.menu_icon.DropDownImageSeparator = System.Drawing.SystemColors.Highlight;
+            this.menu_icon.Fore = System.Drawing.Color.Black;
+            this.menu_icon.HoverFore = System.Drawing.Color.White;
+            this.menu_icon.ItemAnamorphosis = false;
+            this.menu_icon.ItemBorder = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.menu_icon.ItemBorderShow = true;
+            this.menu_icon.ItemHover = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.menu_icon.ItemPressed = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.menu_icon.ItemRadius = 10;
+            this.menu_icon.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.menu_icon.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem2,
+            this.toolStripMenuItem3,
+            this.toolStripMenuItem4,
+            this.toolStripMenuItem5,
+            this.关于ToolStripMenuItem1,
+            this.退出ToolStripMenuItem});
+            this.menu_icon.ItemSplitter = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.menu_icon.Name = "menu_setting";
+            this.menu_icon.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.menu_icon.Size = new System.Drawing.Size(115, 135);
+            this.menu_icon.SkinAllColor = true;
+            this.menu_icon.TitleAnamorphosis = false;
+            this.menu_icon.TitleColor = System.Drawing.Color.White;
+            this.menu_icon.TitleRadius = 10;
+            this.menu_icon.TitleRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem2.Image")));
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(136, 22);
+            this.toolStripMenuItem2.Text = "打开工具";
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem3.Image")));
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(136, 22);
+            this.toolStripMenuItem3.Text = "一键换壁纸";
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem4.Image")));
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(136, 22);
+            this.toolStripMenuItem4.Text = "一键屏保";
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem5.Image")));
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(136, 22);
+            this.toolStripMenuItem5.Text = "一键游戏";
+            // 
+            // 关于ToolStripMenuItem1
+            // 
+            this.关于ToolStripMenuItem1.Name = "关于ToolStripMenuItem1";
+            this.关于ToolStripMenuItem1.Size = new System.Drawing.Size(136, 22);
+            this.关于ToolStripMenuItem1.Text = "关于";
+            // 
+            // 退出ToolStripMenuItem
+            // 
+            this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.退出ToolStripMenuItem.Text = "退出";
+            this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
+            // 
+            // img_DeskSonw
+            // 
+            this.img_DeskSonw.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.img_DeskSonw.ImageSize = new System.Drawing.Size(16, 16);
+            this.img_DeskSonw.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // Form_Main
             // 
@@ -1281,14 +1386,17 @@
             this.menu_setting.ResumeLayout(false);
             this.panel_tabcontrol.ResumeLayout(false);
             this.tab_tool.ResumeLayout(false);
-            this.page_background.ResumeLayout(false);
-            this.menu_OnlineImg.ResumeLayout(false);
+            this.page_js.ResumeLayout(false);
+            this.page_js.PerformLayout();
+            this.skinPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).EndInit();
             this.page_proctect.ResumeLayout(false);
             this.page_proctect.PerformLayout();
             this.panel_web.ResumeLayout(false);
+            this.page_background.ResumeLayout(false);
+            this.menu_OnlineImg.ResumeLayout(false);
             this.tab_file.ResumeLayout(false);
-            this.page_js.ResumeLayout(false);
-            this.page_js.PerformLayout();
+            this.menu_icon.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1355,6 +1463,15 @@
         private System.Windows.Forms.ToolStripMenuItem 图片缓存ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 图片另存为ToolStripMenuItem;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private CCWin.SkinControl.SkinContextMenuStrip menu_icon;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem1;
+        private CCWin.SkinControl.SkinPictureBox skinPictureBox1;
+        private System.Windows.Forms.ImageList img_DeskSonw;
+        private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
     }
 }
 
