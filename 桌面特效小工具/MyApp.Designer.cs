@@ -109,18 +109,6 @@ namespace 桌面特效小工具 {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("蒲公英")]
-        public string DeskStyle {
-            get {
-                return ((string)(this["DeskStyle"]));
-            }
-            set {
-                this["DeskStyle"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("20")]
         public int Time_Locked {
             get {

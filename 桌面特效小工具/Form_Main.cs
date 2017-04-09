@@ -7,7 +7,6 @@ using clock;
 using System.Runtime.InteropServices;
 using Microsoft.Win32;
 using LightControl;
-using Desk;
 using System.Text;
 using Newtonsoft.Json;
 using Setting.Model;
@@ -61,7 +60,8 @@ namespace 桌面特效小工具
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           // usermessagebox.Print(AboutHttp.IsConnectInt().ToString(), AboutHttp.IsConnectInt().ToString());
+         
+            // usermessagebox.Print(AboutHttp.IsConnectInt().ToString(), AboutHttp.IsConnectInt().ToString());
             //this.WindowState = FormWindowState.Maximized;
             this.BackgroundImage = Image.FromFile(MyApp.Default.Path_background);
             tab_tool.SelectedIndex = 0;
@@ -128,65 +128,8 @@ namespace 桌面特效小工具
                 panel_web.Controls.Add(web);
             }
 
-
-            if (tab_tool.SelectedTab.Name == "page_background")
-            {
-                if (!Directory.Exists(receivePath))
-                {
-                    Directory.CreateDirectory(receivePath);
-                }
-                if (!Directory.Exists(receivePath2))
-                {
-                    Directory.CreateDirectory(receivePath2);
-                }
-                if (AboutHttp.IsConnectInt() == true)
-                { 
-                    imgList.ImageSize = new Size(90, 55);
-                    imgList.ColorDepth = ColorDepth.Depth32Bit;
-                    lvList.LargeImageList = imgList;
-                    var hi = new HttpItem()
-                    {
-                        Accept = "text/plain, */*; q=0.01",
-                        UserAgent = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36",
-                        Referer = "https://www.baidu.com/",
-                        URL = "https://www.baidu.com/home/skin/data/skin",
-                        Encoding = Encoding.UTF8
-                    };
-                    var http = new HttpHelper();
-                    var html = http.GetHtml(hi);
-                    var root = JsonConvert.DeserializeObject<Root>(html.Html);
-                    foreach (var item in root.bsResult.data)
-                    {
-                        if (item.type == "最近使用" || item.type == "自定义")
-                        {
-                            continue;
-                        }
-                        TreeNode tn = new TreeNode(item.type);
-
-                        if (item.bgitem != null)
-                        {
-                            tn.Tag = item.bgitem;
-                        }
-                        if (tn.Text != "女神降临" && tn.Text != "明星") tvList.Nodes.Add(tn);
-                        if (item.starData != null)
-                        {
-
-                            foreach (var subItem in item.starData)
-                            {
-                                TreeNode subTN = new TreeNode(subItem.name);
-                                tn.Nodes.Add(subTN);
-                                subTN.Tag = subItem.list;
-                            }
-                        }
-                    }
-                }
-                else if (AboutHttp.IsConnectInt() == false)
-                {
-                    usermessagebox.Print("提示信息", "您处于离线模式，已切换到本地缓存视图，请检查您的网络连接后重试！\r本地缓存视图无法加载小图和设置壁纸");
-                }
+            
             }
-           
-        }
 
         private void btn_setting_Click(object sender, EventArgs e)
         {
@@ -228,9 +171,7 @@ namespace 桌面特效小工具
             if (e.KeyValue == (char)13 || e.KeyValue == (char)27)
             {
                 this.WindowState = FormWindowState.Normal;
-                panel_tabcontrol.Visible = true;
-                pan_SysBtn.Visible = true;
-                btn_ChangClocl.Visible = true;
+                ShowOrHideControls(true);
                 panel_web.Controls.Add(web);
             }
         }
@@ -259,20 +200,22 @@ namespace 桌面特效小工具
             runJs(Js.SetJsCode(""));
             panel_web.Controls.Add(web);
         }
-
+        private void ShowOrHideControls(bool showOrHide)
+        {
+            foreach (Control control in this.Controls)
+            {
+                if (control.Name != "web")
+                {
+                    control.Visible = showOrHide;
+                }
+            }
+        }
         private void btn_begin_Click_1(object sender, EventArgs e)
         {
             this.Controls.Add(web);
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
-            foreach (Control control in this.Controls)
-            {
-                if (control.Name != "web")
-                {
-                    control.Visible = false;
-                }
-            }
-
+            ShowOrHideControls(false);
             this.TopMost = true;
         }
 
@@ -406,53 +349,15 @@ namespace 桌面特效小工具
         {
 
         }
-        public void ShowForm_Img()
-        {
-            Form_DeskImg frm = new Form_DeskImg();
-            frm.Show();
-        }
+ 
 
-        public void threadPro()
-        {
-            MethodInvoker MethInvo = new MethodInvoker(ShowForm_Img);
-            BeginInvoke(MethInvo);
-        }
+
         private void skinRadioButton7_CheckedChanged(object sender, EventArgs e)
         {
-            systemvoid.CloseForm("Form_DeskImg");
-            MyApp.Default.DeskStyle = "蒲公英";
-            MyApp.Default.Save();
-            threadPro();
+
         }
 
-        private void skinRadioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-            systemvoid.CloseForm("Form_DeskImg");
-            MyApp.Default.DeskStyle = "snow";
-            MyApp.Default.Save();
-            threadPro();
-        }
 
-        private void skinRadioButton4_CheckedChanged(object sender, EventArgs e)
-        {
-            systemvoid.CloseForm("Form_DeskImg");
-            MyApp.Default.DeskStyle = "paopao";
-            MyApp.Default.Save();
-            threadPro();
-        }
-
-        private void skinRadioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            systemvoid.CloseForm("Form_DeskImg");
-            MyApp.Default.DeskStyle = "love";
-            MyApp.Default.Save();
-            threadPro();
-        }
-
-        private void cb_CloseTeskImg_CheckedChanged(object sender, EventArgs e)
-        {
-           
-        }
 
         private void cb_prected_CheckedChanged(object sender, EventArgs e)
         {if (timer_userNoDo.Enabled == false) { timer_userNoDo.Enabled = true; return; }
@@ -573,7 +478,7 @@ namespace 桌面特效小工具
                     }
                     catch (Exception ex)
                     {
-                        this.Invoke(new ThreadStart(() => { MessageBox.Show("设置失败:" + Environment.NewLine + ex.ToString()); }));
+                        this.Invoke(new ThreadStart(() => { usermessagebox.Print("提示信息", "设置失败:" + Environment.NewLine + ex.ToString()); }));
                         //MessageBox.Show("设置失败，请重试。");
                     }
                     this.Invoke(new ThreadStart(() => { usermessagebox.Print("提示信息", "设置成功！"); }));
@@ -595,40 +500,96 @@ namespace 桌面特效小工具
 
         private void skinButton3_Click(object sender, EventArgs e)
         {
-            lvList .Items.Clear();
-            imgList.Images.Clear();
-
-            DirectoryInfo TheFolder = new DirectoryInfo(@"img");//文件路径
-            List<string> ImgNames = new List<string>();
-            string allowImg = ".jpg.jpeg.png.bmp";
-            FileInfo[] Files = TheFolder.GetFiles();
-            imgList.ImageSize = new Size(100, 100);
-            for (int i = 0; i < Files.Length; i++)//遍历文件夹
+            if (!Directory.Exists(receivePath))
             {
-                if (Files[i].Length > 0 && allowImg.IndexOf(Files[i].Extension.ToLower()) > -1)//或者jpg,png 文件大小要大于0且是图片文件
+                Directory.CreateDirectory(receivePath);
+            }
+            if (!Directory.Exists(receivePath2))
+            {
+                Directory.CreateDirectory(receivePath2);
+            }
+            if (AboutHttp.IsConnectInt() == true)
+            {
+                imgList.ImageSize = new Size(90, 55);
+                imgList.ColorDepth = ColorDepth.Depth32Bit;
+                lvList.LargeImageList = imgList;
+                var hi = new HttpItem()
                 {
-                    Image image = Image.FromFile(Files[i].DirectoryName + "\\" + Files[i].Name);    //获取文件                 
-                    ImgNames.Add(Files[i].Name);//添加文件名                    
-                    imgList.Images.Add(image);//添加图片                   
+                    Accept = "text/plain, */*; q=0.01",
+                    UserAgent = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36",
+                    Referer = "https://www.baidu.com/",
+                    URL = "https://www.baidu.com/home/skin/data/skin",
+                    Encoding = Encoding.UTF8
+                };
+                var http = new HttpHelper();
+                var html = http.GetHtml(hi);
+                var root = JsonConvert.DeserializeObject<Root>(html.Html);
+                foreach (var item in root.bsResult.data)
+                {
+                    if (item.type == "最近使用" || item.type == "自定义")
+                    {
+                        continue;
+                    }
+                    TreeNode tn = new TreeNode(item.type);
+
+                    if (item.bgitem != null)
+                    {
+                        tn.Tag = item.bgitem;
+                    }
+                    if (tn.Text != "女神降临" && tn.Text != "明星") tvList.Nodes.Add(tn);//两项的子项无法分析地址接口，直接无视掉
+                    if (item.starData != null)
+                    {
+
+                        foreach (var subItem in item.starData)
+                        {
+                            TreeNode subTN = new TreeNode(subItem.name);
+                            tn.Nodes.Add(subTN);
+                            subTN.Tag = subItem.list;
+                        }
+                    }
+                    else if (AboutHttp.IsConnectInt() == false)
+                    {
+                        usermessagebox.Print("提示信息", "您处于离线模式，已切换到本地缓存视图，请检查您的网络连接后重试！\r本地缓存视图无法加载小图和设置壁纸");
+                        #region 本地缓存文件
+                        lvList.Items.Clear();
+                        imgList.Images.Clear();
+
+                        DirectoryInfo TheFolder = new DirectoryInfo(@"img");//文件路径
+                        List<string> ImgNames = new List<string>();
+                        string allowImg = ".jpg.jpeg.png.bmp";
+                        FileInfo[] Files = TheFolder.GetFiles();
+                        imgList.ImageSize = new Size(100, 100);
+                        for (int i = 0; i < Files.Length; i++)//遍历文件夹
+                        {
+                            if (Files[i].Length > 0 && allowImg.IndexOf(Files[i].Extension.ToLower()) > -1)//或者jpg,png 文件大小要大于0且是图片文件
+                            {
+                                Image image = Image.FromFile(Files[i].DirectoryName + "\\" + Files[i].Name);    //获取文件                 
+                                ImgNames.Add(Files[i].Name);//添加文件名                    
+                                imgList.Images.Add(image);//添加图片                   
+                            }
+                        }
+                        //初始化设置
+                        this.lvList.View = View.LargeIcon;
+                        this.lvList.LargeImageList = this.imgList;
+                        //开始绑定
+
+                        this.lvList.BeginUpdate();
+
+                        for (int i = 0; i < ImgNames.Count; i++)
+                        {
+                            // listView1.LargeImageList.Images.Add(list.Images.Keys[i], list.Images[i]);
+                            ListViewItem lvi = new ListViewItem();
+                            lvi.ImageIndex = i;
+                            lvi.Text = ImgNames[i];
+                            this.lvList.Items.Add(lvi);
+                        }
+                        this.lvList.EndUpdate();
+                        #endregion
+                    }
                 }
             }
-            //初始化设置
-            this.lvList .View = View.LargeIcon;
-            this.lvList .LargeImageList = this.imgList;
-            //开始绑定
 
-            this.lvList .BeginUpdate();
-
-            for (int i = 0; i < ImgNames.Count; i++)
-            {
-                // listView1.LargeImageList.Images.Add(list.Images.Keys[i], list.Images[i]);
-                ListViewItem lvi = new ListViewItem();
-                lvi.ImageIndex = i;
-                lvi.Text = ImgNames[i];
-                this.lvList .Items.Add(lvi);
-            }
-            this.lvList .EndUpdate();
-
+          
 
         }
 
@@ -692,6 +653,30 @@ namespace 桌面特效小工具
         {
             runJs(Js.SetJsCode(""));
         }
+
+        private void skinButton2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void skinButton9_Click(object sender, EventArgs e)
+        {
+            if (panel_AutoPosition.FlowDirection == FlowDirection.TopDown) { panel_AutoPosition.FlowDirection = FlowDirection.BottomUp; }
+            else if (panel_AutoPosition.FlowDirection == FlowDirection.BottomUp) { panel_AutoPosition.FlowDirection = FlowDirection.TopDown; }
+         
+        }
+
+        private void panel_sysControl_MouseDown(object sender, MouseEventArgs e)
+        {
+            downPoint = new Point(e.X, e.Y);
+        }
+
+        private void panel_sysControl_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Location = new Point(this.Location.X + e.X - downPoint.X, this.Location.Y + e.Y - downPoint.Y);//将鼠标坐标与窗体位置绑定
+            }
+        }
     }
 }
-

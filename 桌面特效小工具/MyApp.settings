@@ -23,9 +23,6 @@
     <Setting Name="DeskLoop" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="DeskStyle" Type="System.String" Scope="User">
-      <Value Profile="(Default)">蒲公英</Value>
-    </Setting>
     <Setting Name="Time_Locked" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">20</Value>
     </Setting>

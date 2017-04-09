@@ -40,6 +40,7 @@
             this.小组ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.设置中心ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lb_weather2 = new System.Windows.Forms.Label();
+            this.lb_s = new CCWin.SkinControl.SkinLabel();
             this.menu_colck.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -170,6 +171,18 @@
             this.lb_weather2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lb_weather2_MouseDown);
             this.lb_weather2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lb_weather2_MouseMove);
             // 
+            // lb_s
+            // 
+            this.lb_s.AutoSize = true;
+            this.lb_s.BackColor = System.Drawing.Color.Transparent;
+            this.lb_s.BorderColor = System.Drawing.Color.Transparent;
+            this.lb_s.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lb_s.Location = new System.Drawing.Point(232, 53);
+            this.lb_s.Name = "lb_s";
+            this.lb_s.Size = new System.Drawing.Size(36, 27);
+            this.lb_s.TabIndex = 9;
+            this.lb_s.Text = "00";
+            // 
             // Form_NumClock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -179,6 +192,7 @@
             this.ClientSize = new System.Drawing.Size(271, 149);
             this.ContextMenuStrip = this.menu_colck;
             this.ControlBox = false;
+            this.Controls.Add(this.lb_s);
             this.Controls.Add(this.lb_weather2);
             this.Controls.Add(this.skinLabel1);
             this.Controls.Add(this.lb_second);
@@ -207,5 +221,6 @@
         private System.Windows.Forms.ToolStripMenuItem 设置中心ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 小组ToolStripMenuItem;
         private System.Windows.Forms.Label lb_weather2;
+        private CCWin.SkinControl.SkinLabel lb_s;
     }
 }

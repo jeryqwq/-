@@ -71,6 +71,7 @@ namespace 桌面特效小工具
         {
             lb_hour.Text = DateTime.Now.Hour.ToString();
             lb_second.Text  = DateTime.Now.Minute.ToString();
+            lb_s.Text = DateTime.Now.Second.ToString();
         }
         SystemVoid systemvoid = new SystemVoid();
         UserMessagebox usermessagebox = new UserMessagebox();
