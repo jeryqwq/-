@@ -10,5 +10,4 @@
   本程序界面主要采用 CSkin 界面库；
   
   壁纸主要来源于百度个性首页自定义换肤的数据；
-  本程序主页http://doyuourself.top/Windows-Tools/
 ```
